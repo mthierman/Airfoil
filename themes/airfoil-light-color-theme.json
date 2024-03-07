@@ -437,7 +437,7 @@
                 "entity.other",
                 "entity.other.attribute-name",
                 "entity.other.inherited-class",
-                "markup.heading"
+                "punctuation.definition.heading"
             ],
             "settings": {
                 "foreground": "#a21caf"

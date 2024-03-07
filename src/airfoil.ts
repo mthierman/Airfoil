@@ -943,7 +943,7 @@ export default (theme: Theme) => {
                     "entity.other",
                     "entity.other.attribute-name",
                     "entity.other.inherited-class",
-                    "markup.heading",
+                    "punctuation.definition.heading",
                 ],
                 settings: {
                     foreground: tw.fuchsia[theme.scale],
