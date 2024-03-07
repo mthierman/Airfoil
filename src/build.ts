@@ -42,11 +42,11 @@ export default () => {
         .then(() =>
             Promise.all([
                 writeFile(
-                    `${outdir.terminal}/dark.json`,
+                    `${outdir.terminal}/airfoil-dark.json`,
                     JSON.stringify(terminal(defaultColors.dark), null, 4),
                 ),
                 writeFile(
-                    `${outdir.terminal}/light.json`,
+                    `${outdir.terminal}/airfoil-light.json`,
                     JSON.stringify(terminal(defaultColors.light), null, 4),
                 ),
             ]),
