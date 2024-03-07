@@ -13,7 +13,7 @@ export declare global {
         focus: string;
         foreground: string;
         hover: string;
-        scale: 300 | 700;
+        scale: 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
         shadow: string;
         transparent: string;
         terminal: Terminal;

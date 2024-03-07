@@ -1,15 +1,15 @@
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
-import config from "../tailwind.config";
+import tailwindConfig from "../tailwind.config";
 
-const tw = resolveConfig(config).theme.colors;
+const tw = resolveConfig(tailwindConfig).theme.colors;
 
 export enum Mode {
     Dark,
     Light,
 }
 
-const terminalColors = (mode: Mode) => {
+const terminalColors = (mode: Mode): Terminal => {
     switch (mode) {
         case Mode.Dark:
             return {
@@ -29,7 +29,7 @@ const terminalColors = (mode: Mode) => {
                 red: tw.red[500],
                 white: tw.neutral[500],
                 yellow: tw.yellow[500],
-            } as Terminal;
+            };
         case Mode.Light:
             return {
                 black: tw.neutral[700],
@@ -48,11 +48,37 @@ const terminalColors = (mode: Mode) => {
                 red: tw.red[700],
                 white: tw.neutral[700],
                 yellow: tw.yellow[700],
-            } as Terminal;
+            };
     }
 };
 
-export const themeColors = (mode: Mode, tone: string, accentColor: string): Theme => {
+export const terminal = (theme: Theme) => {
+    return {
+        background: theme.background.toUpperCase(),
+        black: theme.terminal.black.toUpperCase(),
+        blue: theme.terminal.blue.toUpperCase(),
+        brightBlack: theme.terminal.brightBlack.toUpperCase(),
+        brightBlue: theme.terminal.brightBlue.toUpperCase(),
+        brightCyan: theme.terminal.brightCyan.toUpperCase(),
+        brightGreen: theme.terminal.brightGreen.toUpperCase(),
+        brightPurple: theme.terminal.brightMagenta.toUpperCase(),
+        brightRed: theme.terminal.brightRed.toUpperCase(),
+        brightWhite: theme.terminal.brightWhite.toUpperCase(),
+        brightYellow: theme.terminal.brightYellow.toUpperCase(),
+        cursorColor: theme.foreground.toUpperCase(),
+        cyan: theme.terminal.cyan.toUpperCase(),
+        foreground: theme.foreground.toUpperCase(),
+        green: theme.terminal.green.toUpperCase(),
+        name: theme.name,
+        purple: theme.terminal.magenta.toUpperCase(),
+        red: theme.terminal.red.toUpperCase(),
+        selectionBackground: theme.dim.toUpperCase(),
+        white: theme.terminal.white.toUpperCase(),
+        yellow: theme.terminal.yellow.toUpperCase(),
+    };
+};
+
+export const themeColors = (mode: Mode, tone: string, accent: string): Theme => {
     switch (mode) {
         case Mode.Dark:
             return {
@@ -63,9 +89,9 @@ export const themeColors = (mode: Mode, tone: string, accentColor: string): Them
                 border: `${tw[tone as keyof DefaultColors][700]}`,
                 comment: tw.emerald[400],
                 dim: `${tw[tone as keyof DefaultColors][500]}`,
-                focus: `${tw[accentColor as keyof DefaultColors][800]}4D`,
+                focus: `${tw[accent as keyof DefaultColors][800]}4D`,
                 foreground: `${tw[tone as keyof DefaultColors][300]}`,
-                hover: `${tw[accentColor as keyof DefaultColors][800]}33`,
+                hover: `${tw[accent as keyof DefaultColors][800]}33`,
                 scale: 300,
                 shadow: "#00000033",
                 transparent: "#00000000",
@@ -80,9 +106,9 @@ export const themeColors = (mode: Mode, tone: string, accentColor: string): Them
                 border: `${tw[tone as keyof DefaultColors][300]}`,
                 comment: tw.emerald[700],
                 dim: `${tw[tone as keyof DefaultColors][500]}`,
-                focus: `${tw[accentColor as keyof DefaultColors][300]}4D`,
+                focus: `${tw[accent as keyof DefaultColors][300]}4D`,
                 foreground: `${tw[tone as keyof DefaultColors][700]}`,
-                hover: `${tw[accentColor as keyof DefaultColors][300]}33`,
+                hover: `${tw[accent as keyof DefaultColors][300]}33`,
                 scale: 700,
                 shadow: "#00000033",
                 transparent: "#FFFFFF00",
@@ -1037,31 +1063,5 @@ export default (theme: Theme) => {
             customLiteral: tw.yellow[theme.scale],
             numberLiteral: tw.emerald[theme.scale],
         },
-    };
-};
-
-export const terminal = (theme: Theme) => {
-    return {
-        background: theme.background.toUpperCase(),
-        black: theme.terminal.black.toUpperCase(),
-        blue: theme.terminal.blue.toUpperCase(),
-        brightBlack: theme.terminal.brightBlack.toUpperCase(),
-        brightBlue: theme.terminal.brightBlue.toUpperCase(),
-        brightCyan: theme.terminal.brightCyan.toUpperCase(),
-        brightGreen: theme.terminal.brightGreen.toUpperCase(),
-        brightPurple: theme.terminal.brightMagenta.toUpperCase(),
-        brightRed: theme.terminal.brightRed.toUpperCase(),
-        brightWhite: theme.terminal.brightWhite.toUpperCase(),
-        brightYellow: theme.terminal.brightYellow.toUpperCase(),
-        cursorColor: theme.foreground.toUpperCase(),
-        cyan: theme.terminal.cyan.toUpperCase(),
-        foreground: theme.foreground.toUpperCase(),
-        green: theme.terminal.green.toUpperCase(),
-        name: theme.name,
-        purple: theme.terminal.magenta.toUpperCase(),
-        red: theme.terminal.red.toUpperCase(),
-        selectionBackground: theme.dim.toUpperCase(),
-        white: theme.terminal.white.toUpperCase(),
-        yellow: theme.terminal.yellow.toUpperCase(),
     };
 };
