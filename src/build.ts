@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import airfoil, { Mode, themeColors } from "./airfoil";
+import airfoil, { Mode, terminal, themeColors } from "./airfoil";
 
 export default () => {
     const outdir = {
@@ -43,11 +43,11 @@ export default () => {
             Promise.all([
                 writeFile(
                     `${outdir.terminal}/dark.json`,
-                    JSON.stringify(defaultColors.dark.terminal, null, 4),
+                    JSON.stringify(terminal(defaultColors.dark), null, 4),
                 ),
                 writeFile(
                     `${outdir.terminal}/light.json`,
-                    JSON.stringify(defaultColors.light.terminal, null, 4),
+                    JSON.stringify(terminal(defaultColors.light), null, 4),
                 ),
             ]),
         )
