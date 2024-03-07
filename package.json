@@ -1,0 +1,64 @@
+{
+    "name": "theme-airfoil",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "publisher": "mthierman",
+    "engines": {
+        "vscode": "*"
+    },
+    "license": "MIT",
+    "displayName": "%display%",
+    "description": "%description%",
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "airfoil",
+        "dark",
+        "light"
+    ],
+    "galleryBanner": {
+        "color": "#0B1120",
+        "theme": "dark"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "%dark%",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-color-theme.json"
+            },
+            {
+                "label": "%light%",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-color-theme.json"
+            }
+        ]
+    },
+    "icon": "data/icon.png",
+    "homepage": "https://github.com/mthierman/Tailwind/blob/main/README.md",
+    "bugs": {
+        "email": "mthierman@gmail.com",
+        "url": "https://github.com/mthierman/Tailwind/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mthierman/Tailwind.git"
+    },
+    "scripts": {
+        "check": "tsc",
+        "dev": "esbuild scripts/dev.ts --bundle --outdir=build --platform=node --format=esm --packages=external && node build/dev.js",
+        "build": "tsc && esbuild scripts/build.ts --bundle --outdir=build --platform=node --format=esm --packages=external && node build/build.js",
+        "vsce": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.25",
+        "@vscode/vsce": "^2.24.0",
+        "esbuild": "^0.20.1",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5.4.2"
+    }
+}
