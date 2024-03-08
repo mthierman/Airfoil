@@ -112,7 +112,7 @@ export const terminal = (theme: Theme) => {
         cyan: theme.terminal.cyan.toUpperCase(),
         foreground: theme.foreground.toUpperCase(),
         green: theme.terminal.green.toUpperCase(),
-        name: theme.name,
+        name: `Airfoil ${Mode[theme.mode]}`,
         purple: theme.terminal.magenta.toUpperCase(),
         red: theme.terminal.red.toUpperCase(),
         selectionBackground: theme.dim.toUpperCase(),
