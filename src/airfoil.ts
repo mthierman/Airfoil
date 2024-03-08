@@ -995,7 +995,6 @@ export default (theme: Theme) => {
             },
             {
                 scope: [
-                    "punctuation",
                     "punctuation.definition.string.begin",
                     "punctuation.definition.string.end",
                     "punctuation.separator",
