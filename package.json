@@ -34,6 +34,16 @@
                 "label": "%light%",
                 "uiTheme": "vs",
                 "path": "./themes/airfoil-light-color-theme.json"
+            },
+            {
+                "label": "%darkStoneRed%",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-red-color-theme.json"
+            },
+            {
+                "label": "%lightStoneRed%",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-red-color-theme.json"
             }
         ]
     },

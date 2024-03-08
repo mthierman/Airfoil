@@ -4,6 +4,7 @@ import { Mode } from "./themes/tailwind";
 export declare global {
     interface Theme {
         name: string;
+        filename: string;
         mode: Mode;
         background: string;
         background2: string;

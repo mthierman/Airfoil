@@ -27,12 +27,20 @@ export default () => {
         .then(() =>
             Promise.all([
                 writeFile(
-                    `${outdir.themes}/airfoil-dark-color-theme.json`,
+                    `${outdir.themes}/${defaultColors.dark.filename}`,
                     JSON.stringify(airfoil(defaultColors.dark), null, 4),
                 ),
                 writeFile(
-                    `${outdir.themes}/airfoil-light-color-theme.json`,
+                    `${outdir.themes}/${defaultColors.light.filename}`,
                     JSON.stringify(airfoil(defaultColors.light), null, 4),
+                ),
+                writeFile(
+                    `${outdir.themes}/${stoneRed.dark.filename}`,
+                    JSON.stringify(airfoil(stoneRed.dark), null, 4),
+                ),
+                writeFile(
+                    `${outdir.themes}/${stoneRed.light.filename}`,
+                    JSON.stringify(airfoil(stoneRed.light), null, 4),
                 ),
             ]),
         )
