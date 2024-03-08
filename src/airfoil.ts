@@ -490,32 +490,24 @@ export default (theme: Theme) => {
             "editorOverviewRuler.deletedForeground": theme.terminal.red,
             "editorOverviewRuler.errorForeground": tw.red[theme.scale],
             "editorOverviewRuler.bracketMatchForeground": tw.green[400],
+            "listFilterWidget.background": theme.background,
+            "listFilterWidget.noMatchesOutline": tw.red[theme.scale],
+            "listFilterWidget.outline": theme.border,
+            "listFilterWidget.shadow": theme.shadow,
 
             // "editorOverviewRuler.addedForeground": test,
-
             // "editorOverviewRuler.commentForeground": test,
             // "editorOverviewRuler.commentUnresolvedForeground": test,
             // "editorOverviewRuler.commonContentForeground": test,
-
             // "editorOverviewRuler.currentContentForeground": test,
-
             // "editorOverviewRuler.incomingContentForeground": test,
-
             // "editorOverviewRuler.infoForeground": test,
-
             // "editorOverviewRuler.inlineChatInserted": test,
             // "editorOverviewRuler.inlineChatRemoved": test,
-
             // "editorOverviewRuler.rangeHighlightForeground": test,
-
             // "editorOverviewRuler.wordHighlightForeground": test,
             // "editorOverviewRuler.wordHighlightStrongForeground": test,
             // "editorOverviewRuler.wordHighlightTextForeground": test,
-
-            // "listFilterWidget.background": test,
-            // "listFilterWidget.noMatchesOutline": test,
-            // "listFilterWidget.outline": test,
-            // "listFilterWidget.shadow": test,
 
             // "actionBar.toggledBackground": test,
             // "charts.blue": test,

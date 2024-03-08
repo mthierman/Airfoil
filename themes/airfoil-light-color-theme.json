@@ -367,7 +367,11 @@
         "editorOverviewRuler.warningForeground": "#b91c1c",
         "editorOverviewRuler.deletedForeground": "#b91c1c",
         "editorOverviewRuler.errorForeground": "#b91c1c",
-        "editorOverviewRuler.bracketMatchForeground": "#4ade80"
+        "editorOverviewRuler.bracketMatchForeground": "#4ade80",
+        "listFilterWidget.background": "#f4f4f5",
+        "listFilterWidget.noMatchesOutline": "#b91c1c",
+        "listFilterWidget.outline": "#d4d4d8",
+        "listFilterWidget.shadow": "#00000033"
     },
     "tokenColors": [
         {
