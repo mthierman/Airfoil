@@ -6,6 +6,7 @@ export declare global {
         name: string;
         filename: string;
         mode: Mode;
+        accent: string;
         background: string;
         background2: string;
         border: string;
