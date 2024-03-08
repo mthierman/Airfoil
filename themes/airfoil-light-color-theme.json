@@ -353,7 +353,21 @@
         "welcomePage.tileBorder": "#d4d4d8",
         "welcomePage.tileHoverBackground": "#93c5fd33",
         "widget.border": "#d4d4d8",
-        "widget.shadow": "#00000033"
+        "widget.shadow": "#00000033",
+        "terminalCommandDecoration.defaultBackground": "#3f3f46",
+        "terminalCommandDecoration.errorBackground": "#b91c1c",
+        "terminalCommandDecoration.successBackground": "#4ade80",
+        "terminalOverviewRuler.cursorForeground": "#3f3f46",
+        "terminalOverviewRuler.findMatchForeground": "#4ade80",
+        "editorOverviewRuler.background": "#FFFFFF00",
+        "editorOverviewRuler.border": "#FFFFFF00",
+        "editorOverviewRuler.findMatchForeground": "#4ade80",
+        "editorOverviewRuler.modifiedForeground": "#a16207",
+        "editorOverviewRuler.selectionHighlightForeground": "#f472b6",
+        "editorOverviewRuler.warningForeground": "#b91c1c",
+        "editorOverviewRuler.deletedForeground": "#b91c1c",
+        "editorOverviewRuler.errorForeground": "#b91c1c",
+        "editorOverviewRuler.bracketMatchForeground": "#4ade80"
     },
     "tokenColors": [
         {
