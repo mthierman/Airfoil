@@ -28,12 +28,12 @@
             {
                 "label": "%dark%",
                 "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-color-theme.json"
+                "path": "./themes/airfoil-dark-zinc-blue-color-theme.json"
             },
             {
                 "label": "%light%",
                 "uiTheme": "vs",
-                "path": "./themes/airfoil-light-color-theme.json"
+                "path": "./themes/airfoil-light-zinc-blue-color-theme.json"
             },
             {
                 "label": "%darkStoneRed%",
