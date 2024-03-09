@@ -12,55 +12,47 @@ export default () => {
         terminal: resolve(dirname(import.meta.dirname), "terminal"),
     };
 
-    let files: Promise<void>[] = [];
-
     const themes = manifest.contributes.themes;
 
     mkdir(outdir.themes, { recursive: true })
         .then(() => {
             for (const theme of themes) {
-                files.push(
-                    writeFile(
-                        resolve(dirname(import.meta.dirname), theme.path),
-                        JSON.stringify(
-                            generateTheme(
-                                themeColors(
-                                    Mode[theme.mode as keyof typeof Mode],
-                                    theme.tone,
-                                    theme.accent,
-                                ),
+                writeFile(
+                    resolve(dirname(import.meta.dirname), theme.path),
+                    JSON.stringify(
+                        generateTheme(
+                            themeColors(
+                                Mode[theme.mode as keyof typeof Mode],
+                                theme.tone,
+                                theme.accent,
                             ),
-                            null,
-                            4,
                         ),
+                        null,
+                        4,
                     ),
                 );
             }
-
-            Promise.all(files);
         })
         .catch(() => process.exit(1));
 
     mkdir(outdir.terminal, { recursive: true })
         .then(() => {
             for (const theme of themes) {
-                files.push(
-                    writeFile(
-                        resolve(
-                            dirname(import.meta.dirname),
-                            theme.path.replace("./themes/", "./terminal/"),
-                        ),
-                        JSON.stringify(
-                            generateTerminal(
-                                themeColors(
-                                    Mode[theme.mode as keyof typeof Mode],
-                                    theme.tone,
-                                    theme.accent,
-                                ),
+                writeFile(
+                    resolve(
+                        dirname(import.meta.dirname),
+                        theme.path.replace("./themes/", "./terminal/"),
+                    ),
+                    JSON.stringify(
+                        generateTerminal(
+                            themeColors(
+                                Mode[theme.mode as keyof typeof Mode],
+                                theme.tone,
+                                theme.accent,
                             ),
-                            null,
-                            4,
                         ),
+                        null,
+                        4,
                     ),
                 );
             }
