@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import airfoil, { Mode } from "./airfoil";
-import terminal from "./terminal";
+import generateTerminal from "./generateTerminal";
+import generateTheme, { Mode } from "./generateTheme";
 import themeColors from "./themeColors";
 
 export default () => {
@@ -22,7 +22,7 @@ export default () => {
                     writeFile(
                         resolve(dirname(import.meta.dirname), theme.path),
                         JSON.stringify(
-                            airfoil(
+                            generateTheme(
                                 themeColors(
                                     Mode[theme.mode as keyof typeof Mode],
                                     theme.tone,
@@ -50,7 +50,7 @@ export default () => {
                             theme.path.replace("./themes/", "./terminal/"),
                         ),
                         JSON.stringify(
-                            terminal(
+                            generateTerminal(
                                 themeColors(
                                     Mode[theme.mode as keyof typeof Mode],
                                     theme.tone,

@@ -1,4 +1,4 @@
-import { Mode } from "./airfoil";
+import { Mode } from "./generateTheme";
 import { default as tw } from "./tailwindConfig";
 
 export default (mode: Mode): Terminal => {
