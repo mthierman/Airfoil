@@ -12,50 +12,61 @@ export default () => {
         terminal: resolve(dirname(import.meta.dirname), "terminal"),
     };
 
+    let themePromises: Promise<void>[] = [];
+    let terminalPromises: Promise<void>[] = [];
+
     const themes = manifest.contributes.themes;
 
     mkdir(outdir.themes, { recursive: true })
         .then(() => {
             for (const theme of themes) {
-                writeFile(
-                    resolve(dirname(import.meta.dirname), theme.path),
-                    JSON.stringify(
-                        generateTheme(
-                            themeColors(
-                                Mode[theme.mode as keyof typeof Mode],
-                                theme.tone,
-                                theme.accent,
+                themePromises.push(
+                    writeFile(
+                        resolve(dirname(import.meta.dirname), theme.path),
+                        JSON.stringify(
+                            generateTheme(
+                                themeColors(
+                                    Mode[theme.mode as keyof typeof Mode],
+                                    theme.tone,
+                                    theme.accent,
+                                ),
                             ),
+                            null,
+                            4,
                         ),
-                        null,
-                        4,
                     ),
                 );
             }
+
+            Promise.all(themePromises);
         })
         .catch(() => process.exit(1));
 
     mkdir(outdir.terminal, { recursive: true })
         .then(() => {
             for (const theme of themes) {
-                writeFile(
-                    resolve(
-                        dirname(import.meta.dirname),
-                        theme.path.replace("./themes/", "./terminal/"),
-                    ),
-                    JSON.stringify(
-                        generateTerminal(
-                            themeColors(
-                                Mode[theme.mode as keyof typeof Mode],
-                                theme.tone,
-                                theme.accent,
-                            ),
+                terminalPromises.push(
+                    writeFile(
+                        resolve(
+                            dirname(import.meta.dirname),
+                            theme.path.replace("./themes/", "./terminal/"),
                         ),
-                        null,
-                        4,
+                        JSON.stringify(
+                            generateTerminal(
+                                themeColors(
+                                    Mode[theme.mode as keyof typeof Mode],
+                                    theme.tone,
+                                    theme.accent,
+                                ),
+                            ),
+                            null,
+                            4,
+                        ),
                     ),
                 );
             }
+
+            Promise.all(terminalPromises);
         })
         .catch(() => process.exit(1));
 };
