@@ -36,7 +36,7 @@
             {
                 "label": "Airfoil Light Zinc Blue",
                 "uiTheme": "vs",
-                "mode": "Dark",
+                "mode": "Light",
                 "tone": "zinc",
                 "accent": "blue",
                 "path": "./themes/airfoil-light-zinc-blue-color-theme.json"
@@ -44,7 +44,7 @@
             {
                 "label": "Airfoil Dark Stone Red",
                 "uiTheme": "vs-dark",
-                "mode": "Light",
+                "mode": "Dark",
                 "tone": "stone",
                 "accent": "red",
                 "path": "./themes/airfoil-dark-stone-red-color-theme.json"

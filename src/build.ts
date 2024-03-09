@@ -48,7 +48,7 @@ export default () => {
                             theme.path.replace("./themes/", "./terminal/"),
                         ),
                         JSON.stringify(
-                            airfoil(
+                            terminal(
                                 themeColors(
                                     Mode[theme.mode as keyof typeof Mode],
                                     theme.tone,
