@@ -1,5 +1,5 @@
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
-import { Mode } from "./generateTheme";
+import { Mode, Theme } from "./global";
 import { default as tw } from "./tailwindConfig";
 import terminalColors from "./terminalColors";
 

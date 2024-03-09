@@ -1,9 +1,5 @@
+import { Theme } from "./global";
 import { default as tw } from "./tailwindConfig";
-
-export enum Mode {
-    Dark,
-    Light,
-}
 
 const test = tw.pink[400];
 

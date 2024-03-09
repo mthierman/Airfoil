@@ -2,7 +2,8 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
 import generateTerminal from "./generateTerminal";
-import generateTheme, { Mode } from "./generateTheme";
+import generateTheme from "./generateTheme";
+import { Mode } from "./global";
 import themeColors from "./themeColors";
 
 export default () => {

@@ -1,3 +1,5 @@
+import { Theme } from "./global";
+
 export default (theme: Theme) => {
     return {
         background: theme.background.toUpperCase(),

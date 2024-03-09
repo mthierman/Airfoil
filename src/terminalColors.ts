@@ -1,4 +1,4 @@
-import { Mode } from "./generateTheme";
+import { Mode, Terminal } from "./global";
 import { default as tw } from "./tailwindConfig";
 
 export default (mode: Mode): Terminal => {
