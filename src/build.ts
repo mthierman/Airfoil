@@ -14,6 +14,7 @@ export default () => {
 
     let themePromises: Promise<void>[] = [];
     let terminalPromises: Promise<void>[] = [];
+    let terminalThemes: unknown[] = [];
 
     const themes = manifest.contributes.themes;
 
@@ -65,24 +66,23 @@ export default () => {
                     ),
                 );
 
-                writeFile(resolve(dirname(import.meta.dirname), "terminal", "all.json"), "");
-                appendFile(
-                    resolve(dirname(import.meta.dirname), "terminal", "all.json"),
-                    JSON.stringify(
-                        generateTerminal(
-                            themeColors(
-                                Mode[theme.mode as keyof typeof Mode],
-                                theme.tone,
-                                theme.accent,
-                            ),
+                terminalThemes.push(
+                    generateTerminal(
+                        themeColors(
+                            Mode[theme.mode as keyof typeof Mode],
+                            theme.tone,
+                            theme.accent,
                         ),
-                        null,
-                        4,
-                    ) + ",\n",
+                    ),
                 );
             }
 
-            Promise.all(terminalPromises);
+            Promise.all(terminalPromises).then(() => {
+                writeFile(
+                    resolve(dirname(import.meta.dirname), "terminal", "all.json"),
+                    JSON.stringify(terminalThemes, null, 4),
+                );
+            });
         })
         .catch(() => process.exit(1));
 };
