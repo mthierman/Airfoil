@@ -1,8 +1,9 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import airfoil, { Mode, themeColors } from "./airfoil";
+import airfoil, { Mode } from "./airfoil";
 import terminal from "./terminal";
+import themeColors from "./themeColors";
 
 export default () => {
     const outdir = {

@@ -1,8 +1,7 @@
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import type { DefaultColors } from "tailwindcss/types/generated/colors";
 import tailwindConfig from "../tailwind.config";
 
-const tw = resolveConfig(tailwindConfig).theme.colors;
+export const tw = resolveConfig(tailwindConfig).theme.colors;
 
 export enum Mode {
     Dark,
@@ -10,92 +9,6 @@ export enum Mode {
 }
 
 const test = tw.pink[400];
-
-export const terminalColors = (mode: Mode): Terminal => {
-    switch (mode) {
-        case Mode.Dark:
-            return {
-                black: tw.neutral[500],
-                blue: tw.blue[500],
-                brightBlack: tw.neutral[400],
-                brightBlue: tw.blue[400],
-                brightCyan: tw.cyan[400],
-                brightGreen: tw.green[400],
-                brightMagenta: tw.pink[400],
-                brightRed: tw.red[400],
-                brightWhite: tw.neutral[400],
-                brightYellow: tw.yellow[400],
-                cyan: tw.cyan[500],
-                green: tw.green[500],
-                magenta: tw.pink[500],
-                red: tw.red[500],
-                white: tw.neutral[500],
-                yellow: tw.yellow[500],
-            };
-        case Mode.Light:
-            return {
-                black: tw.neutral[700],
-                blue: tw.blue[700],
-                brightBlack: tw.neutral[600],
-                brightBlue: tw.blue[600],
-                brightCyan: tw.cyan[600],
-                brightGreen: tw.green[600],
-                brightMagenta: tw.pink[600],
-                brightRed: tw.red[600],
-                brightWhite: tw.neutral[600],
-                brightYellow: tw.yellow[600],
-                cyan: tw.cyan[700],
-                green: tw.green[700],
-                magenta: tw.pink[700],
-                red: tw.red[700],
-                white: tw.neutral[700],
-                yellow: tw.yellow[700],
-            };
-    }
-};
-
-export const themeColors = (mode: Mode, tone: string, accent: string): Theme => {
-    switch (mode) {
-        case Mode.Dark:
-            return {
-                name: `Airfoil ${Mode[mode]} ${tone[0].toUpperCase() + tone.slice(1)} ${accent[0].toUpperCase() + accent.slice(1)}`,
-                filename: `airfoil-${Mode[mode][0].toLowerCase() + Mode[mode].slice(1)}-${tone}-${accent}-color-theme.json`,
-                mode: Mode.Dark,
-                accent: `${tw[accent as keyof DefaultColors][400]}`,
-                background: `${tw[tone as keyof DefaultColors][900]}`,
-                background2: `${tw[tone as keyof DefaultColors][800]}`,
-                border: `${tw[tone as keyof DefaultColors][700]}`,
-                comment: tw.emerald[400],
-                dim: `${tw[tone as keyof DefaultColors][500]}`,
-                focus: `${tw[accent as keyof DefaultColors][800]}4D`,
-                foreground: `${tw[tone as keyof DefaultColors][300]}`,
-                hover: `${tw[accent as keyof DefaultColors][800]}33`,
-                scale: 300,
-                shadow: "#00000033",
-                transparent: "#00000000",
-                terminal: terminalColors(Mode.Dark),
-            };
-        case Mode.Light:
-            return {
-                name: `Airfoil ${Mode[mode]} ${tone[0].toUpperCase() + tone.slice(1)} ${accent[0].toUpperCase() + accent.slice(1)}`,
-                filename: `airfoil-${Mode[mode][0].toLowerCase() + Mode[mode].slice(1)}-${tone}-${accent}-color-theme.json`,
-                mode: Mode.Light,
-                accent: `${tw[accent as keyof DefaultColors][400]}`,
-                background: `${tw[tone as keyof DefaultColors][100]}`,
-                background2: `${tw[tone as keyof DefaultColors][200]}`,
-                border: `${tw[tone as keyof DefaultColors][300]}`,
-                comment: tw.emerald[700],
-                dim: `${tw[tone as keyof DefaultColors][500]}`,
-                focus: `${tw[accent as keyof DefaultColors][300]}4D`,
-                foreground: `${tw[tone as keyof DefaultColors][700]}`,
-                hover: `${tw[accent as keyof DefaultColors][300]}33`,
-                scale: 700,
-                shadow: "#00000033",
-                transparent: "#FFFFFF00",
-                terminal: terminalColors(Mode.Light),
-            };
-    }
-};
 
 export default (theme: Theme) => {
     return {
