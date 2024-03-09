@@ -1,5 +1,6 @@
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
-import { Mode, tw } from "./airfoil";
+import { Mode } from "./airfoil";
+import { default as tw } from "./tailwindConfig";
 import terminalColors from "./terminalColors";
 
 export default (mode: Mode, tone: string, accent: string): Theme => {

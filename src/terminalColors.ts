@@ -1,4 +1,5 @@
-import { Mode, tw } from "./airfoil";
+import { Mode } from "./airfoil";
+import { default as tw } from "./tailwindConfig";
 
 export default (mode: Mode): Terminal => {
     switch (mode) {

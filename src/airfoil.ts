@@ -1,7 +1,4 @@
-import resolveConfig from "tailwindcss/resolveConfig.js";
-import tailwindConfig from "../tailwind.config";
-
-export const tw = resolveConfig(tailwindConfig).theme.colors;
+import { default as tw } from "./tailwindConfig";
 
 export enum Mode {
     Dark,
