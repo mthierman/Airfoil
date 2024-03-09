@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { appendFile, mkdir, unlink, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
 import generateTerminal from "./generateTerminal";
@@ -63,6 +63,22 @@ export default () => {
                             4,
                         ),
                     ),
+                );
+
+                writeFile(resolve(dirname(import.meta.dirname), "terminal", "all.json"), "");
+                appendFile(
+                    resolve(dirname(import.meta.dirname), "terminal", "all.json"),
+                    JSON.stringify(
+                        generateTerminal(
+                            themeColors(
+                                Mode[theme.mode as keyof typeof Mode],
+                                theme.tone,
+                                theme.accent,
+                            ),
+                        ),
+                        null,
+                        4,
+                    ) + ",\n",
                 );
             }
 
