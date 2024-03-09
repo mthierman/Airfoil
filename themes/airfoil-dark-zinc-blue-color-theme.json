@@ -442,7 +442,7 @@
         "terminalCommandDecoration.errorBackground": "#fca5a5",
         "terminalCommandDecoration.successBackground": "#86efac",
         "terminalCursor.background": "#00000000",
-        "terminalCursor.foreground": "#d4d4d8",
+        "terminalCursor.foreground": "#60a5fa",
         "terminalOverviewRuler.cursorForeground": "#d4d4d8",
         "terminalOverviewRuler.findMatchForeground": "#86efac",
         "terminalStickyScroll.background": "#18181b",

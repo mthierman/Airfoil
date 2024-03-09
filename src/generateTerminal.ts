@@ -13,7 +13,7 @@ export default (theme: Theme) => {
         brightRed: theme.terminal.brightRed.toUpperCase(),
         brightWhite: theme.terminal.brightWhite.toUpperCase(),
         brightYellow: theme.terminal.brightYellow.toUpperCase(),
-        cursorColor: theme.foreground.toUpperCase(),
+        cursorColor: theme.accent.toUpperCase(),
         cyan: theme.terminal.cyan.toUpperCase(),
         foreground: theme.foreground.toUpperCase(),
         green: theme.terminal.green.toUpperCase(),

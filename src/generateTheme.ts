@@ -448,7 +448,7 @@ export default (theme: Theme) => {
             "terminalCommandDecoration.errorBackground": tw.red[theme.scale],
             "terminalCommandDecoration.successBackground": tw.green[theme.scale],
             "terminalCursor.background": theme.transparent,
-            "terminalCursor.foreground": theme.foreground,
+            "terminalCursor.foreground": theme.accent,
             "terminalOverviewRuler.cursorForeground": theme.foreground,
             "terminalOverviewRuler.findMatchForeground": tw.green[theme.scale],
             "terminalStickyScroll.background": theme.background,
