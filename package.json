@@ -8,8 +8,8 @@
         "vscode": "*"
     },
     "license": "MIT",
-    "displayName": "%display%",
-    "description": "%description%",
+    "displayName": "Airfoil Theme",
+    "description": "Airfoil light & dark themes",
     "categories": [
         "Themes"
     ],
@@ -20,42 +20,54 @@
         "light"
     ],
     "galleryBanner": {
-        "color": "#0B1120",
+        "color": "#000000",
         "theme": "dark"
     },
     "contributes": {
         "themes": [
             {
-                "label": "%dark%",
+                "label": "Airfoil Dark Zinc Blue",
                 "uiTheme": "vs-dark",
+                "mode": "Dark",
+                "tone": "zinc",
+                "accent": "blue",
                 "path": "./themes/airfoil-dark-zinc-blue-color-theme.json"
             },
             {
-                "label": "%light%",
+                "label": "Airfoil Light Zinc Blue",
                 "uiTheme": "vs",
+                "mode": "Dark",
+                "tone": "zinc",
+                "accent": "blue",
                 "path": "./themes/airfoil-light-zinc-blue-color-theme.json"
             },
             {
-                "label": "%darkStoneRed%",
+                "label": "Airfoil Dark Stone Red",
                 "uiTheme": "vs-dark",
+                "mode": "Light",
+                "tone": "stone",
+                "accent": "red",
                 "path": "./themes/airfoil-dark-stone-red-color-theme.json"
             },
             {
-                "label": "%lightStoneRed%",
+                "label": "Airfoil Light Stone Red",
                 "uiTheme": "vs",
+                "mode": "Light",
+                "tone": "stone",
+                "accent": "red",
                 "path": "./themes/airfoil-light-stone-red-color-theme.json"
             }
         ]
     },
     "icon": "data/icon.png",
-    "homepage": "https://github.com/mthierman/Tailwind/blob/main/README.md",
+    "homepage": "https://github.com/mthierman/Airfoil/blob/main/README.md",
     "bugs": {
         "email": "mthierman@gmail.com",
-        "url": "https://github.com/mthierman/Tailwind/issues"
+        "url": "https://github.com/mthierman/Airfoil/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/mthierman/Tailwind.git"
+        "url": "https://github.com/mthierman/Airfoil.git"
     },
     "scripts": {
         "check": "tsc",
