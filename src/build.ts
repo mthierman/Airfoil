@@ -1,7 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import airfoil, { Mode, terminal, themeColors } from "./airfoil";
+import airfoil, { Mode, themeColors } from "./airfoil";
+import terminal from "./terminal";
 
 export default () => {
     const outdir = {
@@ -61,17 +62,6 @@ export default () => {
                     ),
                 );
             }
-
-            // Promise.all([
-            //     writeFile(
-            //         `${outdir.terminal}/airfoil-dark.json`,
-            //         JSON.stringify(terminal(defaultColors.dark), null, 4),
-            //     ),
-            //     writeFile(
-            //         `${outdir.terminal}/airfoil-light.json`,
-            //         JSON.stringify(terminal(defaultColors.light), null, 4),
-            //     ),
-            // ]);
         })
         .catch(() => process.exit(1));
 };

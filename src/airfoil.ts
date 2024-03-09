@@ -11,7 +11,7 @@ export enum Mode {
 
 const test = tw.pink[400];
 
-const terminalColors = (mode: Mode): Terminal => {
+export const terminalColors = (mode: Mode): Terminal => {
     switch (mode) {
         case Mode.Dark:
             return {
@@ -95,33 +95,6 @@ export const themeColors = (mode: Mode, tone: string, accent: string): Theme => 
                 terminal: terminalColors(Mode.Light),
             };
     }
-};
-
-export const terminal = (theme: Theme) => {
-    return {
-        background: theme.background.toUpperCase(),
-        black: theme.terminal.black.toUpperCase(),
-        blue: theme.terminal.blue.toUpperCase(),
-        brightBlack: theme.terminal.brightBlack.toUpperCase(),
-        brightBlue: theme.terminal.brightBlue.toUpperCase(),
-        brightCyan: theme.terminal.brightCyan.toUpperCase(),
-        brightGreen: theme.terminal.brightGreen.toUpperCase(),
-        brightPurple: theme.terminal.brightMagenta.toUpperCase(),
-        brightRed: theme.terminal.brightRed.toUpperCase(),
-        brightWhite: theme.terminal.brightWhite.toUpperCase(),
-        brightYellow: theme.terminal.brightYellow.toUpperCase(),
-        cursorColor: theme.foreground.toUpperCase(),
-        cyan: theme.terminal.cyan.toUpperCase(),
-        foreground: theme.foreground.toUpperCase(),
-        green: theme.terminal.green.toUpperCase(),
-        // name: `Airfoil ${Mode[theme.mode]}`,
-        name: theme.name,
-        purple: theme.terminal.magenta.toUpperCase(),
-        red: theme.terminal.red.toUpperCase(),
-        selectionBackground: theme.dim.toUpperCase(),
-        white: theme.terminal.white.toUpperCase(),
-        yellow: theme.terminal.yellow.toUpperCase(),
-    };
 };
 
 export default (theme: Theme) => {
