@@ -100,7 +100,7 @@ export default (theme: Theme) => {
             "editor.findMatchHighlightBackground": `${theme.accent}80`,
             "editor.findMatchHighlightBorder": theme.accent,
 
-            "editor.selectionBackground": theme.focus,
+            "editor.selectionBackground": `${theme.accent}40`,
             "editor.selectionForeground": theme.foreground,
             "editor.selectionHighlightBackground": theme.focus,
             "editor.selectionHighlightBorder": `${tw.green[400]}59`,

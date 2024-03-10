@@ -92,7 +92,7 @@
         "editor.findMatchBorder": "#38bdf8",
         "editor.findMatchHighlightBackground": "#38bdf880",
         "editor.findMatchHighlightBorder": "#38bdf8",
-        "editor.selectionBackground": "#0759854D",
+        "editor.selectionBackground": "#38bdf840",
         "editor.selectionForeground": "#d1d5db",
         "editor.selectionHighlightBackground": "#0759854D",
         "editor.selectionHighlightBorder": "#4ade8059",
