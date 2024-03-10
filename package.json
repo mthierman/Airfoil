@@ -26,6 +26,22 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Gray Sky",
+                "uiTheme": "vs-dark",
+                "mode": "Dark",
+                "tone": "gray",
+                "accent": "sky",
+                "path": "./themes/airfoil-dark-gray-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Indigo",
+                "uiTheme": "vs-dark",
+                "mode": "Dark",
+                "tone": "slate",
+                "accent": "indigo",
+                "path": "./themes/airfoil-dark-slate-indigo-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Zinc Blue",
                 "uiTheme": "vs-dark",
                 "mode": "Dark",
