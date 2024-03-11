@@ -26,6 +26,22 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Neutral Orange",
+                "uiTheme": "vs-dark",
+                "mode": "Dark",
+                "tone": "neutral",
+                "accent": "orange",
+                "path": "./themes/airfoil-dark-neutral-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Orange",
+                "uiTheme": "vs",
+                "mode": "Light",
+                "tone": "neutral",
+                "accent": "orange",
+                "path": "./themes/airfoil-light-neutral-orange-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Gray Sky",
                 "uiTheme": "vs-dark",
                 "mode": "Dark",
