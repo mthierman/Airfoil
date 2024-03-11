@@ -446,7 +446,7 @@
         "terminal.hoverHighlightBackground": "#7dd3fc33",
         "terminal.inactiveSelectionBackground": "#7dd3fc33",
         "terminal.selectionBackground": "#38bdf840",
-        "terminal.selectionForeground": "#38bdf8",
+        "terminal.selectionForeground": "#374151",
         "terminal.tab.activeBorder": "#FFFFFF00",
         "terminalCommandDecoration.defaultBackground": "#374151",
         "terminalCommandDecoration.errorBackground": "#b91c1c",

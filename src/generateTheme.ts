@@ -454,7 +454,7 @@ export default (theme: Theme) => {
             "terminal.hoverHighlightBackground": theme.hover,
             "terminal.inactiveSelectionBackground": theme.hover,
             "terminal.selectionBackground": `${theme.accent}40`,
-            "terminal.selectionForeground": theme.accent,
+            "terminal.selectionForeground": theme.foreground,
             "terminal.tab.activeBorder": theme.transparent,
             "terminalCommandDecoration.defaultBackground": theme.foreground,
             "terminalCommandDecoration.errorBackground": tw.red[theme.scale],
