@@ -1,9 +1,9 @@
 import { Theme } from "./global";
 import { default as tw } from "./tailwindConfig";
 
-const test = tw.pink[400];
-
 export default (theme: Theme) => {
+    const test = tw.pink[400];
+
     return {
         $schema: "vscode://schemas/color-theme",
         name: theme.name,
