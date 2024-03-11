@@ -18,7 +18,7 @@
         "name": "Airfoil Dark Gray Sky",
         "purple": "#EC4899",
         "red": "#EF4444",
-        "selectionBackground": "#6B7280",
+        "selectionBackground": "#38BDF8",
         "white": "#737373",
         "yellow": "#EAB308"
     },
@@ -41,7 +41,7 @@
         "name": "Airfoil Dark Slate Indigo",
         "purple": "#EC4899",
         "red": "#EF4444",
-        "selectionBackground": "#64748B",
+        "selectionBackground": "#818CF8",
         "white": "#737373",
         "yellow": "#EAB308"
     },
@@ -64,7 +64,7 @@
         "name": "Airfoil Dark Zinc Blue",
         "purple": "#EC4899",
         "red": "#EF4444",
-        "selectionBackground": "#71717A",
+        "selectionBackground": "#60A5FA",
         "white": "#737373",
         "yellow": "#EAB308"
     },
@@ -87,7 +87,7 @@
         "name": "Airfoil Light Zinc Blue",
         "purple": "#BE185D",
         "red": "#B91C1C",
-        "selectionBackground": "#71717A",
+        "selectionBackground": "#60A5FA",
         "white": "#404040",
         "yellow": "#A16207"
     },
@@ -110,7 +110,7 @@
         "name": "Airfoil Dark Stone Red",
         "purple": "#EC4899",
         "red": "#EF4444",
-        "selectionBackground": "#78716C",
+        "selectionBackground": "#F87171",
         "white": "#737373",
         "yellow": "#EAB308"
     },
@@ -133,7 +133,7 @@
         "name": "Airfoil Light Stone Red",
         "purple": "#BE185D",
         "red": "#B91C1C",
-        "selectionBackground": "#78716C",
+        "selectionBackground": "#F87171",
         "white": "#404040",
         "yellow": "#A16207"
     }

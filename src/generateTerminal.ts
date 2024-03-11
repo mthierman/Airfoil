@@ -20,7 +20,7 @@ export default (theme: Theme) => {
         name: theme.name,
         purple: theme.terminal.magenta.toUpperCase(),
         red: theme.terminal.red.toUpperCase(),
-        selectionBackground: theme.dim.toUpperCase(),
+        selectionBackground: theme.accent.toUpperCase(),
         white: theme.terminal.white.toUpperCase(),
         yellow: theme.terminal.yellow.toUpperCase(),
     };
