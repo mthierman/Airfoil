@@ -179,7 +179,7 @@
         "editorUnicodeHighlight.background": "#FFFFFF00",
         "editorUnicodeHighlight.border": "#b91c1c",
         "editorWidget.background": "#f4f4f5",
-        "editorWidget.border": "#60a5fa",
+        "editorWidget.border": "#d4d4d8",
         "editorWidget.foreground": "#3f3f46",
         "editorWidget.resizeBorder": "#d4d4d8",
         "errorForeground": "#f87171",

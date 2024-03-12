@@ -185,7 +185,7 @@ export default (theme: Theme) => {
             "editorUnicodeHighlight.background": theme.transparent,
             "editorUnicodeHighlight.border": theme.terminal.red,
             "editorWidget.background": theme.background,
-            "editorWidget.border": theme.accent,
+            "editorWidget.border": theme.border,
             "editorWidget.foreground": theme.foreground,
             "editorWidget.resizeBorder": theme.border,
             "errorForeground": tw.red[400],
