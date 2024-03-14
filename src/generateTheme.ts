@@ -1,7 +1,7 @@
-import { Theme, tailwindColors } from "./config";
+import { Theme } from "./config";
 
 export default (theme: Theme) => {
-    const tw = tailwindColors();
+    const tw = theme.tailwind;
     const test = tw.pink[400];
 
     return {

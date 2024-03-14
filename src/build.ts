@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import { getTheme, mode } from "./config";
+import { getTheme, type mode } from "./config";
 import generateTerminal from "./generateTerminal";
 import generateTheme from "./generateTheme";
 
