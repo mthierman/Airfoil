@@ -25,8 +25,8 @@ export interface Theme {
     hover: string;
     scale: scale;
     shadow: string;
-    tailwind: DefaultColors;
     transparent: string;
+    tailwind: DefaultColors;
     terminal: {
         black: string;
         blue: string;
@@ -67,8 +67,8 @@ export const getTheme = (mode: mode, tone: string, accent: string): Theme => {
         hover: `${tw[accent.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 300]}33`,
         scale: mode === "Dark" ? 300 : 700,
         shadow: "#00000033",
-        tailwind: tw,
         transparent: mode === "Dark" ? "#00000000" : "#FFFFFF00",
+        tailwind: tw,
         terminal: {
             black: tw.neutral[terminalScale],
             blue: tw.blue[terminalScale],
