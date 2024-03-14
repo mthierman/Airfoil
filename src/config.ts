@@ -2,7 +2,7 @@ import resolveConfig from "tailwindcss/resolveConfig.js";
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
 import tailwindConfig from "../tailwind.config";
 
-const getTailwind = () => {
+const tailwindColors = () => {
     return resolveConfig(tailwindConfig).theme.colors;
 };
 
@@ -25,6 +25,7 @@ export interface Theme {
     hover: string;
     scale: scale;
     shadow: string;
+    test: string;
     transparent: string;
     tailwind: DefaultColors;
     terminal: {
@@ -48,7 +49,7 @@ export interface Theme {
 }
 
 export const getTheme = (mode: mode, tone: string, accent: string): Theme => {
-    const tw = getTailwind();
+    const tw = tailwindColors();
     const terminalScale = mode === "Dark" ? 500 : 700;
     const terminalBrightScale = mode === "Dark" ? 400 : 600;
 
@@ -67,6 +68,7 @@ export const getTheme = (mode: mode, tone: string, accent: string): Theme => {
         hover: `${tw[accent.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 300]}33`,
         scale: mode === "Dark" ? 300 : 700,
         shadow: "#00000033",
+        test: tw.pink[400],
         transparent: mode === "Dark" ? "#00000000" : "#FFFFFF00",
         tailwind: tw,
         terminal: {

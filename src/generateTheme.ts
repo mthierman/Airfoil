@@ -2,7 +2,6 @@ import { Theme } from "./config";
 
 export default (theme: Theme) => {
     const tw = theme.tailwind;
-    const test = tw.pink[400];
 
     return {
         $schema: "vscode://schemas/color-theme",
