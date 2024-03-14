@@ -60,7 +60,7 @@ export const getTheme = (mode: Mode, tone: string, accent: string): Theme => {
         background: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 900 : 100]}`,
         background2: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 800 : 200]}`,
         border: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 700 : 300]}`,
-        comment: tw.emerald[400],
+        comment: tw.emerald[mode === Mode.Dark ? 400 : 700],
         dim: `${tw[tone as keyof DefaultColors][500]}`,
         focus: `${tw[accent as keyof DefaultColors][mode === Mode.Dark ? 800 : 300]}4D`,
         foreground: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 300 : 700]}`,
