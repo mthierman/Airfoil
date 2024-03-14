@@ -50,7 +50,7 @@ export interface Theme {
 export const getTheme = (mode: Mode, tone: string, accent: string): Theme => {
     const tw = tailwindColors();
     const terminalScale = mode === Mode.Dark ? 500 : 700;
-    const terminalBrightScale = mode === Mode.Dark ? 400 : 400;
+    const terminalBrightScale = mode === Mode.Dark ? 400 : 600;
 
     return {
         name: `Airfoil ${Mode[mode]} ${tone[0].toUpperCase() + tone.slice(1)} ${accent[0].toUpperCase() + accent.slice(1)}`,
