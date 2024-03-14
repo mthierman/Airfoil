@@ -2,18 +2,10 @@ import resolveConfig from "tailwindcss/resolveConfig.js";
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
 import tailwindConfig from "../tailwind.config";
 
-const tailwindColors = () => {
-    return resolveConfig(tailwindConfig).theme.colors;
-};
-
-export type mode = "Dark" | "Light";
-
-type scale = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
-
 export interface Theme {
     name: string;
     filename: string;
-    mode: mode;
+    mode: string;
     accent: string;
     background: string;
     background2: string;
@@ -23,7 +15,7 @@ export interface Theme {
     focus: string;
     foreground: string;
     hover: string;
-    scale: scale;
+    scale: 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
     shadow: string;
     test: string;
     transparent: string;
@@ -48,8 +40,8 @@ export interface Theme {
     };
 }
 
-export const getTheme = (mode: mode, tone: string, accent: string): Theme => {
-    const tw = tailwindColors();
+export const makeTheme = (mode: string, tone: string, accent: string): Theme => {
+    const tw = resolveConfig(tailwindConfig).theme.colors;
     const terminalScale = mode === "Dark" ? 500 : 700;
     const terminalBrightScale = mode === "Dark" ? 400 : 600;
 

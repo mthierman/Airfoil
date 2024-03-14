@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import { getTheme, type mode } from "./config";
+import { makeTheme } from "./config";
 import generateTerminal from "./generateTerminal";
 import generateTheme from "./generateTheme";
 
@@ -24,7 +24,7 @@ export default () => {
                     writeFile(
                         resolve(dirname(import.meta.dirname), theme.path),
                         JSON.stringify(
-                            generateTheme(getTheme(theme.mode as mode, theme.tone, theme.accent)),
+                            generateTheme(makeTheme(theme.mode, theme.tone, theme.accent)),
                             null,
                             4,
                         ),
@@ -46,9 +46,7 @@ export default () => {
                             theme.path.replace("./themes/", "./terminal/"),
                         ),
                         JSON.stringify(
-                            generateTerminal(
-                                getTheme(theme.mode as mode, theme.tone, theme.accent),
-                            ),
+                            generateTerminal(makeTheme(theme.mode, theme.tone, theme.accent)),
                             null,
                             4,
                         ),
@@ -56,7 +54,7 @@ export default () => {
                 );
 
                 terminalThemes.push(
-                    generateTerminal(getTheme(theme.mode as mode, theme.tone, theme.accent)),
+                    generateTerminal(makeTheme(theme.mode, theme.tone, theme.accent)),
                 );
             }
 
