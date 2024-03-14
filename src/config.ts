@@ -6,15 +6,14 @@ export const tailwindColors = () => {
     return resolveConfig(tailwindConfig).theme.colors;
 };
 
-export enum Mode {
-    Dark,
-    Light,
-}
+export type mode = "Dark" | "Light";
+
+export type scale = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
 
 export interface Theme {
     name: string;
     filename: string;
-    mode: Mode;
+    mode: mode;
     accent: string;
     background: string;
     background2: string;
@@ -24,8 +23,9 @@ export interface Theme {
     focus: string;
     foreground: string;
     hover: string;
-    scale: 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
+    scale: scale;
     shadow: string;
+    tailwind: DefaultColors;
     transparent: string;
     terminal: {
         black: string;
@@ -47,27 +47,28 @@ export interface Theme {
     };
 }
 
-export const getTheme = (mode: Mode, tone: string, accent: string): Theme => {
+export const getTheme = (mode: mode, tone: string, accent: string): Theme => {
     const tw = tailwindColors();
-    const terminalScale = mode === Mode.Dark ? 500 : 700;
-    const terminalBrightScale = mode === Mode.Dark ? 400 : 600;
+    const terminalScale = mode === "Dark" ? 500 : 700;
+    const terminalBrightScale = mode === "Dark" ? 400 : 600;
 
     return {
-        name: `Airfoil ${Mode[mode]} ${tone[0].toUpperCase() + tone.slice(1)} ${accent[0].toUpperCase() + accent.slice(1)}`,
-        filename: `airfoil-${Mode[mode][0].toLowerCase() + Mode[mode].slice(1)}-${tone}-${accent}-color-theme.json`,
-        mode: Mode.Dark,
-        accent: `${tw[accent as keyof DefaultColors][400]}`,
-        background: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 900 : 100]}`,
-        background2: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 800 : 200]}`,
-        border: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 700 : 300]}`,
-        comment: tw.emerald[mode === Mode.Dark ? 400 : 700],
-        dim: `${tw[tone as keyof DefaultColors][500]}`,
-        focus: `${tw[accent as keyof DefaultColors][mode === Mode.Dark ? 800 : 300]}4D`,
-        foreground: `${tw[tone as keyof DefaultColors][mode === Mode.Dark ? 300 : 700]}`,
-        hover: `${tw[accent as keyof DefaultColors][mode === Mode.Dark ? 800 : 300]}33`,
-        scale: mode === Mode.Dark ? 300 : 700,
+        name: `Airfoil ${mode} ${tone} ${accent}`,
+        filename: `airfoil-${mode.toLowerCase()}-${tone.toLowerCase()}-${accent.toLowerCase()}-color-theme.json`,
+        mode: mode,
+        accent: `${tw[accent.toLowerCase() as keyof DefaultColors][400]}`,
+        background: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 900 : 100]}`,
+        background2: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 200]}`,
+        border: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 700 : 300]}`,
+        comment: tw.emerald[mode === "Dark" ? 400 : 700],
+        dim: `${tw[tone.toLowerCase() as keyof DefaultColors][500]}`,
+        focus: `${tw[accent.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 300]}4D`,
+        foreground: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 300 : 700]}`,
+        hover: `${tw[accent.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 300]}33`,
+        scale: mode === "Dark" ? 300 : 700,
         shadow: "#00000033",
-        transparent: mode === Mode.Dark ? "#00000000" : "#FFFFFF00",
+        tailwind: tw,
+        transparent: mode === "Dark" ? "#00000000" : "#FFFFFF00",
         terminal: {
             black: tw.neutral[terminalScale],
             blue: tw.blue[terminalScale],

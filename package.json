@@ -27,82 +27,82 @@
         "themes": [
             {
                 "label": "Airfoil Dark Neutral Orange",
-                "uiTheme": "vs-dark",
                 "mode": "Dark",
-                "tone": "neutral",
-                "accent": "orange",
+                "tone": "Neutral",
+                "accent": "Orange",
+                "uiTheme": "vs-dark",
                 "path": "./themes/airfoil-dark-neutral-orange-color-theme.json"
             },
             {
                 "label": "Airfoil Light Neutral Orange",
-                "uiTheme": "vs",
                 "mode": "Light",
-                "tone": "neutral",
-                "accent": "orange",
+                "tone": "Neutral",
+                "accent": "Orange",
+                "uiTheme": "vs",
                 "path": "./themes/airfoil-light-neutral-orange-color-theme.json"
             },
             {
                 "label": "Airfoil Dark Gray Sky",
-                "uiTheme": "vs-dark",
                 "mode": "Dark",
-                "tone": "gray",
-                "accent": "sky",
+                "tone": "Gray",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
                 "path": "./themes/airfoil-dark-gray-sky-color-theme.json"
             },
             {
                 "label": "Airfoil Light Gray Sky",
-                "uiTheme": "vs",
                 "mode": "Light",
-                "tone": "gray",
-                "accent": "sky",
+                "tone": "Gray",
+                "accent": "Sky",
+                "uiTheme": "vs",
                 "path": "./themes/airfoil-light-gray-sky-color-theme.json"
             },
             {
                 "label": "Airfoil Dark Slate Indigo",
-                "uiTheme": "vs-dark",
                 "mode": "Dark",
-                "tone": "slate",
-                "accent": "indigo",
+                "tone": "Slate",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
                 "path": "./themes/airfoil-dark-slate-indigo-color-theme.json"
             },
             {
                 "label": "Airfoil Light Slate Indigo",
-                "uiTheme": "vs",
                 "mode": "Light",
-                "tone": "slate",
-                "accent": "indigo",
+                "tone": "Slate",
+                "accent": "Indigo",
+                "uiTheme": "vs",
                 "path": "./themes/airfoil-light-slate-indigo-color-theme.json"
             },
             {
                 "label": "Airfoil Dark Zinc Blue",
-                "uiTheme": "vs-dark",
                 "mode": "Dark",
-                "tone": "zinc",
-                "accent": "blue",
+                "tone": "Zinc",
+                "accent": "Blue",
+                "uiTheme": "vs-dark",
                 "path": "./themes/airfoil-dark-zinc-blue-color-theme.json"
             },
             {
                 "label": "Airfoil Light Zinc Blue",
-                "uiTheme": "vs",
                 "mode": "Light",
-                "tone": "zinc",
-                "accent": "blue",
+                "tone": "Zinc",
+                "accent": "Blue",
+                "uiTheme": "vs",
                 "path": "./themes/airfoil-light-zinc-blue-color-theme.json"
             },
             {
                 "label": "Airfoil Dark Stone Red",
-                "uiTheme": "vs-dark",
                 "mode": "Dark",
-                "tone": "stone",
-                "accent": "red",
+                "tone": "Stone",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
                 "path": "./themes/airfoil-dark-stone-red-color-theme.json"
             },
             {
                 "label": "Airfoil Light Stone Red",
-                "uiTheme": "vs",
                 "mode": "Light",
-                "tone": "stone",
-                "accent": "red",
+                "tone": "Stone",
+                "accent": "Red",
+                "uiTheme": "vs",
                 "path": "./themes/airfoil-light-stone-red-color-theme.json"
             }
         ]

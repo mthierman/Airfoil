@@ -1,7 +1,7 @@
-import { appendFile, mkdir, unlink, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import { Mode, getTheme } from "./config";
+import { getTheme, mode } from "./config";
 import generateTerminal from "./generateTerminal";
 import generateTheme from "./generateTheme";
 
@@ -24,13 +24,7 @@ export default () => {
                     writeFile(
                         resolve(dirname(import.meta.dirname), theme.path),
                         JSON.stringify(
-                            generateTheme(
-                                getTheme(
-                                    Mode[theme.mode as keyof typeof Mode],
-                                    theme.tone,
-                                    theme.accent,
-                                ),
-                            ),
+                            generateTheme(getTheme(theme.mode as mode, theme.tone, theme.accent)),
                             null,
                             4,
                         ),
@@ -53,11 +47,7 @@ export default () => {
                         ),
                         JSON.stringify(
                             generateTerminal(
-                                getTheme(
-                                    Mode[theme.mode as keyof typeof Mode],
-                                    theme.tone,
-                                    theme.accent,
-                                ),
+                                getTheme(theme.mode as mode, theme.tone, theme.accent),
                             ),
                             null,
                             4,
@@ -66,9 +56,7 @@ export default () => {
                 );
 
                 terminalThemes.push(
-                    generateTerminal(
-                        getTheme(Mode[theme.mode as keyof typeof Mode], theme.tone, theme.accent),
-                    ),
+                    generateTerminal(getTheme(theme.mode as mode, theme.tone, theme.accent)),
                 );
             }
 
