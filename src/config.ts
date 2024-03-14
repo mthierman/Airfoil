@@ -6,6 +6,10 @@ export interface Theme {
     name: string;
     filename: string;
     mode: string;
+    keys: {
+        accent: keyof DefaultColors;
+        tone: keyof DefaultColors;
+    };
     accent: string;
     background: string;
     background2: string;
@@ -51,6 +55,10 @@ export const makeTheme = (mode: string, tone: string, accent: string): Theme => 
         name: `Airfoil ${mode} ${tone} ${accent}`,
         filename: `airfoil-${mode.toLowerCase()}-${tone.toLowerCase()}-${accent.toLowerCase()}-color-theme.json`,
         mode: mode,
+        keys: {
+            accent: accent.toLowerCase() as keyof DefaultColors,
+            tone: tone.toLowerCase() as keyof DefaultColors,
+        },
         accent: `${tw[accent.toLowerCase() as keyof DefaultColors][400]}`,
         background: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 900 : 100]}`,
         background2: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 200]}`,

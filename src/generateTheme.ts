@@ -477,8 +477,10 @@ export default (theme: Theme) => {
             "toolbar.activeBackground": theme.focus,
             "toolbar.hoverBackground": theme.hover,
             "toolbar.hoverOutline": theme.transparent,
-            "tree.inactiveIndentGuidesStroke": theme.dim,
-            "tree.indentGuidesStroke": theme.foreground,
+            "tree.inactiveIndentGuidesStroke":
+                theme.tailwind[theme.keys.tone][theme.mode === "Dark" ? 700 : 300],
+            "tree.indentGuidesStroke":
+                theme.tailwind[theme.keys.tone][theme.mode === "Dark" ? 600 : 400],
             "walkThrough.embeddedEditorBackground": theme.background,
             "walkthrough.stepTitle.foreground": theme.foreground,
             "welcomePage.background": theme.background,
