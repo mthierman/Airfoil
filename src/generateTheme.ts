@@ -170,7 +170,7 @@ export default (theme: Theme) => {
             "editorOverviewRuler.border": theme.transparent,
             "editorOverviewRuler.bracketMatchForeground": tw.green[theme.scale],
             "editorOverviewRuler.deletedForeground": theme.terminal.red,
-            "editorOverviewRuler.errorForeground": tw.red[theme.scale],
+            "editorOverviewRuler.errorForeground": theme.error,
             "editorOverviewRuler.findMatchForeground": `${theme.foreground}80`,
             "editorOverviewRuler.modifiedForeground": theme.terminal.yellow,
             "editorOverviewRuler.selectionHighlightForeground": theme.foreground,

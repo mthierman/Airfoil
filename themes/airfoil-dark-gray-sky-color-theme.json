@@ -165,7 +165,7 @@
         "editorOverviewRuler.border": "#00000000",
         "editorOverviewRuler.bracketMatchForeground": "#86efac",
         "editorOverviewRuler.deletedForeground": "#ef4444",
-        "editorOverviewRuler.errorForeground": "#fca5a5",
+        "editorOverviewRuler.errorForeground": "#f87171",
         "editorOverviewRuler.findMatchForeground": "#d1d5db80",
         "editorOverviewRuler.modifiedForeground": "#eab308",
         "editorOverviewRuler.selectionHighlightForeground": "#d1d5db",
