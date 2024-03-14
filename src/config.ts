@@ -12,11 +12,13 @@ export interface Theme {
     border: string;
     comment: string;
     dim: string;
+    error: string;
     focus: string;
     foreground: string;
     hover: string;
     scale: 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
     shadow: string;
+    success: string;
     test: string;
     transparent: string;
     tailwind: DefaultColors;
@@ -55,11 +57,13 @@ export const makeTheme = (mode: string, tone: string, accent: string): Theme => 
         border: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 700 : 300]}`,
         comment: tw.emerald[mode === "Dark" ? 400 : 700],
         dim: `${tw[tone.toLowerCase() as keyof DefaultColors][500]}`,
+        error: tw.red[400],
         focus: `${tw[accent.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 300]}4D`,
         foreground: `${tw[tone.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 300 : 700]}`,
         hover: `${tw[accent.toLowerCase() as keyof DefaultColors][mode === "Dark" ? 800 : 300]}33`,
         scale: mode === "Dark" ? 300 : 700,
         shadow: "#00000033",
+        success: tw.green[400],
         test: tw.pink[400],
         transparent: mode === "Dark" ? "#00000000" : "#FFFFFF00",
         tailwind: tw,
