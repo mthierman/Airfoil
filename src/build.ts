@@ -1,10 +1,9 @@
 import { appendFile, mkdir, unlink, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
+import { Mode, getTheme } from "./config";
 import generateTerminal from "./generateTerminal";
 import generateTheme from "./generateTheme";
-import { Mode } from "./global";
-import themeColors from "./themeColors";
 
 export default () => {
     const outdir = {
@@ -26,7 +25,7 @@ export default () => {
                         resolve(dirname(import.meta.dirname), theme.path),
                         JSON.stringify(
                             generateTheme(
-                                themeColors(
+                                getTheme(
                                     Mode[theme.mode as keyof typeof Mode],
                                     theme.tone,
                                     theme.accent,
@@ -54,7 +53,7 @@ export default () => {
                         ),
                         JSON.stringify(
                             generateTerminal(
-                                themeColors(
+                                getTheme(
                                     Mode[theme.mode as keyof typeof Mode],
                                     theme.tone,
                                     theme.accent,
@@ -68,11 +67,7 @@ export default () => {
 
                 terminalThemes.push(
                     generateTerminal(
-                        themeColors(
-                            Mode[theme.mode as keyof typeof Mode],
-                            theme.tone,
-                            theme.accent,
-                        ),
+                        getTheme(Mode[theme.mode as keyof typeof Mode], theme.tone, theme.accent),
                     ),
                 );
             }

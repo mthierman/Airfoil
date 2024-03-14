@@ -1,4 +1,4 @@
-import { Theme } from "./global";
+import { Theme } from "./config";
 
 export default (theme: Theme) => {
     return {
