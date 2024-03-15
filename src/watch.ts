@@ -36,8 +36,6 @@ export default async (script: string) => {
         metafile: true,
     });
 
-    // console.clear();
-
     await ctx.watch();
 
     const cli = readline.createInterface(stdin, stdout);

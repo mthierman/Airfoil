@@ -1,9 +1,10 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import manifest from "../package.json" with { type: "json" };
-import { makeTheme } from "./config";
 import generateTerminal from "./generateTerminal";
 import generateTheme from "./generateTheme";
+import makeTheme from "./makeTheme";
+import type { ThemeManifest } from "./types";
 
 export default () => {
     const outdir = {
@@ -15,7 +16,7 @@ export default () => {
     let terminalPromises: Promise<void>[] = [];
     let terminalThemes: unknown[] = [];
 
-    const themes = manifest.contributes.themes;
+    const themes = manifest.contributes.themes as ThemeManifest[];
 
     mkdir(outdir.themes, { recursive: true })
         .then(() => {
@@ -23,11 +24,7 @@ export default () => {
                 themePromises.push(
                     writeFile(
                         resolve(dirname(import.meta.dirname), theme.path),
-                        JSON.stringify(
-                            generateTheme(makeTheme(theme.mode, theme.tone, theme.accent)),
-                            null,
-                            4,
-                        ),
+                        JSON.stringify(generateTheme(makeTheme(theme)), null, 4),
                     ),
                 );
             }
@@ -45,17 +42,11 @@ export default () => {
                             dirname(import.meta.dirname),
                             theme.path.replace("./themes/", "./terminal/"),
                         ),
-                        JSON.stringify(
-                            generateTerminal(makeTheme(theme.mode, theme.tone, theme.accent)),
-                            null,
-                            4,
-                        ),
+                        JSON.stringify(generateTerminal(makeTheme(theme)), null, 4),
                     ),
                 );
 
-                terminalThemes.push(
-                    generateTerminal(makeTheme(theme.mode, theme.tone, theme.accent)),
-                );
+                terminalThemes.push(generateTerminal(makeTheme(theme)));
             }
 
             Promise.all(terminalPromises).then(() => {
