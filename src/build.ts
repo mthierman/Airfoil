@@ -12,16 +12,14 @@ export default () => {
         terminal: resolve(dirname(import.meta.dirname), "terminal"),
     };
 
-    let themePromises: Promise<void>[] = [];
-    let terminalPromises: Promise<void>[] = [];
-    let terminalThemes: unknown[] = [];
-
     const themes = manifest.contributes.themes as ThemeManifest[];
 
     mkdir(outdir.themes, { recursive: true })
         .then(() => {
+            let promise: Promise<void>[] = [];
+
             for (const theme of themes) {
-                themePromises.push(
+                promise.push(
                     writeFile(
                         resolve(dirname(import.meta.dirname), theme.path),
                         JSON.stringify(generateTheme(makeTheme(theme)), null, 4),
@@ -29,14 +27,17 @@ export default () => {
                 );
             }
 
-            Promise.all(themePromises);
+            Promise.all(promise);
         })
         .catch(() => process.exit(1));
 
     mkdir(outdir.terminal, { recursive: true })
         .then(() => {
+            let promise: Promise<void>[] = [];
+            let all: unknown[] = [];
+
             for (const theme of themes) {
-                terminalPromises.push(
+                promise.push(
                     writeFile(
                         resolve(
                             dirname(import.meta.dirname),
@@ -46,13 +47,13 @@ export default () => {
                     ),
                 );
 
-                terminalThemes.push(generateTerminal(makeTheme(theme)));
+                all.push(generateTerminal(makeTheme(theme)));
             }
 
-            Promise.all(terminalPromises).then(() => {
+            Promise.all(promise).then(() => {
                 writeFile(
                     resolve(dirname(import.meta.dirname), "terminal", "all.json"),
-                    JSON.stringify(terminalThemes, null, 4),
+                    JSON.stringify(all, null, 4),
                 );
             });
         })
