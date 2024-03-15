@@ -8,7 +8,7 @@ export default (theme: ThemeManifest): Theme => {
     const terminalBrightScale = theme.mode === "Dark" ? 400 : 600;
 
     return {
-        name: `${theme.label}`,
+        name: theme.label,
         filename: `airfoil-${theme.mode.toLowerCase()}-${theme.tone.toLowerCase()}-${theme.accent.toLowerCase()}-color-theme.json`,
         mode: theme.mode,
         keys: {
