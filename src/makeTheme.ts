@@ -30,6 +30,7 @@ export default (theme: ThemeManifest): Theme => {
         success: tailwind.green[400],
         test: tailwind.pink[400],
         transparent: theme.mode === "Dark" ? "#00000000" : "#FFFFFF00",
+        warning: tailwind.yellow[400],
         tailwind: tailwind,
         terminal: {
             black: tailwind.neutral[terminalScale],

@@ -27,6 +27,7 @@ interface Theme {
     success: string;
     test: string;
     transparent: string;
+    warning: string;
     tailwind: DefaultColors;
     terminal: {
         black: string;
