@@ -26,6 +26,38 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Neutral Green",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Green",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Purple",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Purple",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-purple-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Neutral Orange",
                 "mode": "Dark",
                 "tone": "Neutral",
