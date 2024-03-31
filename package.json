@@ -26,6 +26,54 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Stone Pink",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Purple",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Purple",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Purple",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Purple",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Purple",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-purple-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Neutral Green",
                 "mode": "Dark",
                 "tone": "Neutral",
