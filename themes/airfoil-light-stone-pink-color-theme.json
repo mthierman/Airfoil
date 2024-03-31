@@ -1,6 +1,6 @@
 {
     "$schema": "vscode://schemas/color-theme",
-    "name": "Airfoil Light Slate Purple",
+    "name": "Airfoil Light Stone Pink",
     "semanticHighlighting": true,
     "colors": {
         "activityBar.activeBackground": "#FFFFFF00",
