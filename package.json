@@ -26,6 +26,22 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Zinc Indigo",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Indigo",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Indigo",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-indigo-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Stone Pink",
                 "mode": "Dark",
                 "tone": "Stone",

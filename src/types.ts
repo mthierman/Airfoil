@@ -75,4 +75,4 @@ type ThemeManifest = {
     path: string;
 };
 
-export { DefaultColors, Mode, Scale, Theme, ThemeManifest };
+export type { DefaultColors, Mode, Scale, Theme, ThemeManifest };
