@@ -26,6 +26,22 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Neutral Pink",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Pink",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-pink-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Zinc Indigo",
                 "mode": "Dark",
                 "tone": "Zinc",

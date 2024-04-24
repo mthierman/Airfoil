@@ -4,8 +4,10 @@ import type { DefaultColors, Mode, Theme, ThemeManifest } from "./types";
 
 export default (theme: ThemeManifest): Theme => {
     const tailwind = resolveConfig(tailwindConfig).theme.colors;
-    const terminalScale = theme.mode === "Dark" ? 500 : 700;
-    const terminalBrightScale = theme.mode === "Dark" ? 400 : 600;
+    const isDark = theme.mode === "Dark";
+    const terminalScale = isDark ? 500 : 700;
+    const terminalBrightScale = isDark ? 400 : 600;
+    const scale = isDark ? 300 : 700;
 
     return {
         name: theme.label,
@@ -16,21 +18,21 @@ export default (theme: ThemeManifest): Theme => {
             tone: theme.tone.toLowerCase() as keyof DefaultColors,
         },
         accent: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][400]}`,
-        background: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][theme.mode === "Dark" ? 900 : 100]}`,
-        background2: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][theme.mode === "Dark" ? 800 : 200]}`,
-        border: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][theme.mode === "Dark" ? 700 : 300]}`,
-        comment: tailwind.emerald[theme.mode === "Dark" ? 400 : 700],
+        background: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 900 : 100]}`,
+        background2: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 800 : 200]}`,
+        border: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 700 : 300]}`,
+        comment: tailwind.emerald[isDark ? 400 : 700],
         dim: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][500]}`,
-        error: tailwind.red[400],
-        focus: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][theme.mode === "Dark" ? 800 : 300]}4D`,
-        foreground: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][theme.mode === "Dark" ? 300 : 700]}`,
-        hover: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][theme.mode === "Dark" ? 800 : 300]}33`,
-        scale: theme.mode === "Dark" ? 300 : 700,
+        error: tailwind.red[scale],
+        focus: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][isDark ? 800 : 300]}4D`,
+        foreground: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 300 : 700]}`,
+        hover: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][isDark ? 800 : 300]}33`,
+        scale: scale,
         shadow: "#00000033",
-        success: tailwind.green[400],
-        test: tailwind.pink[400],
-        transparent: theme.mode === "Dark" ? "#00000000" : "#FFFFFF00",
-        warning: tailwind.yellow[400],
+        success: tailwind.green[scale],
+        test: tailwind.pink[scale],
+        transparent: isDark ? "#00000000" : "#FFFFFF00",
+        warning: tailwind.yellow[scale],
         tailwind: tailwind,
         terminal: {
             black: tailwind.neutral[terminalScale],
