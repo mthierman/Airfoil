@@ -26,6 +26,54 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Zinc Rose",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Rose",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Rose",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Rose",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Red",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Red",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Red",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Pink",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Pink",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-pink-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Neutral Pink",
                 "mode": "Dark",
                 "tone": "Neutral",
