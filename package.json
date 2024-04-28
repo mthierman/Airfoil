@@ -26,6 +26,22 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Zinc Green",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Green",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-green-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Zinc Rose",
                 "mode": "Dark",
                 "tone": "Zinc",
