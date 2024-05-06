@@ -26,6 +26,38 @@
     "contributes": {
         "themes": [
             {
+                "label": "Airfoil Dark Zinc Sky",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Sky",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Sky",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Cyan",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Cyan",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-cyan-color-theme.json"
+            },
+            {
                 "label": "Airfoil Dark Zinc Green",
                 "mode": "Dark",
                 "tone": "Zinc",
