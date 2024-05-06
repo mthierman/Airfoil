@@ -1,3 +1,6 @@
+import { mkdir, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+
 import manifest from "../package.json" with { type: "json" };
 
 const modes = ["Light", "Dark"];
@@ -87,4 +90,10 @@ const generateManifest = () => {
     };
 };
 
-console.log(generateManifest());
+const generate = async () => {
+    const root = resolve(dirname(import.meta.dirname));
+    await mkdir(root, { recursive: true });
+    writeFile(resolve(root, "package.json"), JSON.stringify(generateManifest(), null, 4));
+};
+
+generate();

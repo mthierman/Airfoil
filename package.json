@@ -26,252 +26,92 @@
     "contributes": {
         "themes": [
             {
-                "label": "Airfoil Dark Zinc Sky",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Sky",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-sky-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Sky",
+                "label": "Airfoil Light Slate Red",
                 "mode": "Light",
-                "tone": "Zinc",
-                "accent": "Sky",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-sky-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Zinc Cyan",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Cyan",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-cyan-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Cyan",
-                "mode": "Light",
-                "tone": "Zinc",
-                "accent": "Cyan",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-cyan-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Zinc Green",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Green",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-green-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Green",
-                "mode": "Light",
-                "tone": "Zinc",
-                "accent": "Green",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-green-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Zinc Rose",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Rose",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-rose-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Rose",
-                "mode": "Light",
-                "tone": "Zinc",
-                "accent": "Rose",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-rose-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Zinc Red",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Red",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-red-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Red",
-                "mode": "Light",
-                "tone": "Zinc",
+                "tone": "Slate",
                 "accent": "Red",
                 "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-red-color-theme.json"
+                "path": "./themes/airfoil-light-slate-red-color-theme.json"
             },
             {
-                "label": "Airfoil Dark Zinc Pink",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Pink",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-pink-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Pink",
-                "mode": "Light",
-                "tone": "Zinc",
-                "accent": "Pink",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-pink-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Neutral Pink",
-                "mode": "Dark",
-                "tone": "Neutral",
-                "accent": "Pink",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-neutral-pink-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Neutral Pink",
-                "mode": "Light",
-                "tone": "Neutral",
-                "accent": "Pink",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-neutral-pink-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Zinc Indigo",
-                "mode": "Dark",
-                "tone": "Zinc",
-                "accent": "Indigo",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-indigo-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Zinc Indigo",
-                "mode": "Light",
-                "tone": "Zinc",
-                "accent": "Indigo",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-zinc-indigo-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Stone Pink",
-                "mode": "Dark",
-                "tone": "Stone",
-                "accent": "Pink",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-stone-pink-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Stone Pink",
-                "mode": "Light",
-                "tone": "Stone",
-                "accent": "Pink",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-stone-pink-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Slate Purple",
-                "mode": "Dark",
-                "tone": "Slate",
-                "accent": "Purple",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-slate-purple-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Slate Purple",
+                "label": "Airfoil Light Slate Orange",
                 "mode": "Light",
                 "tone": "Slate",
-                "accent": "Purple",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-slate-purple-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Stone Purple",
-                "mode": "Dark",
-                "tone": "Stone",
-                "accent": "Purple",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-stone-purple-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Stone Purple",
-                "mode": "Light",
-                "tone": "Stone",
-                "accent": "Purple",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-stone-purple-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Neutral Green",
-                "mode": "Dark",
-                "tone": "Neutral",
-                "accent": "Green",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-neutral-green-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Neutral Green",
-                "mode": "Light",
-                "tone": "Neutral",
-                "accent": "Green",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-neutral-green-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Neutral Purple",
-                "mode": "Dark",
-                "tone": "Neutral",
-                "accent": "Purple",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-neutral-purple-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Neutral Purple",
-                "mode": "Light",
-                "tone": "Neutral",
-                "accent": "Purple",
-                "uiTheme": "vs",
-                "path": "./themes/airfoil-light-neutral-purple-color-theme.json"
-            },
-            {
-                "label": "Airfoil Dark Neutral Orange",
-                "mode": "Dark",
-                "tone": "Neutral",
-                "accent": "Orange",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-neutral-orange-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Neutral Orange",
-                "mode": "Light",
-                "tone": "Neutral",
                 "accent": "Orange",
                 "uiTheme": "vs",
-                "path": "./themes/airfoil-light-neutral-orange-color-theme.json"
+                "path": "./themes/airfoil-light-slate-orange-color-theme.json"
             },
             {
-                "label": "Airfoil Dark Gray Sky",
-                "mode": "Dark",
-                "tone": "Gray",
-                "accent": "Sky",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-gray-sky-color-theme.json"
-            },
-            {
-                "label": "Airfoil Light Gray Sky",
+                "label": "Airfoil Light Slate Amber",
                 "mode": "Light",
-                "tone": "Gray",
+                "tone": "Slate",
+                "accent": "Amber",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Yellow",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Yellow",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Lime",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Lime",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Green",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Emerald",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Emerald",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Teal",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Teal",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Cyan",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Sky",
+                "mode": "Light",
+                "tone": "Slate",
                 "accent": "Sky",
                 "uiTheme": "vs",
-                "path": "./themes/airfoil-light-gray-sky-color-theme.json"
+                "path": "./themes/airfoil-light-slate-sky-color-theme.json"
             },
             {
-                "label": "Airfoil Dark Slate Indigo",
-                "mode": "Dark",
+                "label": "Airfoil Light Slate Blue",
+                "mode": "Light",
                 "tone": "Slate",
-                "accent": "Indigo",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-slate-indigo-color-theme.json"
+                "accent": "Blue",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-blue-color-theme.json"
             },
             {
                 "label": "Airfoil Light Slate Indigo",
@@ -282,12 +122,260 @@
                 "path": "./themes/airfoil-light-slate-indigo-color-theme.json"
             },
             {
-                "label": "Airfoil Dark Zinc Blue",
-                "mode": "Dark",
-                "tone": "Zinc",
+                "label": "Airfoil Light Slate Violet",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Violet",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Purple",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Fuchsia",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Fuchsia",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Pink",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Slate Rose",
+                "mode": "Light",
+                "tone": "Slate",
+                "accent": "Rose",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-slate-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Red",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Red",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Orange",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Orange",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Amber",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Amber",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Yellow",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Yellow",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Lime",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Lime",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Green",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Emerald",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Emerald",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Teal",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Teal",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Cyan",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Sky",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Sky",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Blue",
+                "mode": "Light",
+                "tone": "Gray",
                 "accent": "Blue",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-zinc-blue-color-theme.json"
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Indigo",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Indigo",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Violet",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Violet",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Purple",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Fuchsia",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Fuchsia",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Pink",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Gray Rose",
+                "mode": "Light",
+                "tone": "Gray",
+                "accent": "Rose",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-gray-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Red",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Red",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Orange",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Orange",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Amber",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Amber",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Yellow",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Yellow",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Lime",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Lime",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Green",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Emerald",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Emerald",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Teal",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Teal",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Cyan",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Sky",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Sky",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-sky-color-theme.json"
             },
             {
                 "label": "Airfoil Light Zinc Blue",
@@ -298,12 +386,188 @@
                 "path": "./themes/airfoil-light-zinc-blue-color-theme.json"
             },
             {
-                "label": "Airfoil Dark Stone Red",
-                "mode": "Dark",
-                "tone": "Stone",
+                "label": "Airfoil Light Zinc Indigo",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Indigo",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Violet",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Violet",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Purple",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Fuchsia",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Fuchsia",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Pink",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Zinc Rose",
+                "mode": "Light",
+                "tone": "Zinc",
+                "accent": "Rose",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-zinc-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Red",
+                "mode": "Light",
+                "tone": "Neutral",
                 "accent": "Red",
-                "uiTheme": "vs-dark",
-                "path": "./themes/airfoil-dark-stone-red-color-theme.json"
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Orange",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Orange",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Amber",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Amber",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Yellow",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Yellow",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Lime",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Lime",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Green",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Emerald",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Emerald",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Teal",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Teal",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Cyan",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Sky",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Sky",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Blue",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Blue",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Indigo",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Indigo",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Violet",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Violet",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Purple",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Fuchsia",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Fuchsia",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Pink",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Neutral Rose",
+                "mode": "Light",
+                "tone": "Neutral",
+                "accent": "Rose",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-neutral-rose-color-theme.json"
             },
             {
                 "label": "Airfoil Light Stone Red",
@@ -312,6 +576,814 @@
                 "accent": "Red",
                 "uiTheme": "vs",
                 "path": "./themes/airfoil-light-stone-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Orange",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Orange",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Amber",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Amber",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Yellow",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Yellow",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Lime",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Lime",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Green",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Green",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Emerald",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Emerald",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Teal",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Teal",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Cyan",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Cyan",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Sky",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Sky",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Blue",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Blue",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Indigo",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Indigo",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Violet",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Violet",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Purple",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Purple",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Fuchsia",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Fuchsia",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Pink",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Pink",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Light Stone Rose",
+                "mode": "Light",
+                "tone": "Stone",
+                "accent": "Rose",
+                "uiTheme": "vs",
+                "path": "./themes/airfoil-light-stone-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Red",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Orange",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Amber",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Yellow",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Yellow",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Lime",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Lime",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Green",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Emerald",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Emerald",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Teal",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Teal",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Cyan",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Sky",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Blue",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Indigo",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Violet",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Violet",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Purple",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Fuchsia",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Fuchsia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Pink",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Slate Rose",
+                "mode": "Dark",
+                "tone": "Slate",
+                "accent": "Rose",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-slate-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Red",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Orange",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Amber",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Yellow",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Yellow",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Lime",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Lime",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Green",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Emerald",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Emerald",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Teal",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Teal",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Cyan",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Sky",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Blue",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Indigo",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Violet",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Violet",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Purple",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Fuchsia",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Fuchsia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Pink",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Gray Rose",
+                "mode": "Dark",
+                "tone": "Gray",
+                "accent": "Rose",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-gray-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Red",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Orange",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Amber",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Yellow",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Yellow",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Lime",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Lime",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Green",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Emerald",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Emerald",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Teal",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Teal",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Cyan",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Sky",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Blue",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Indigo",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Violet",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Violet",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Purple",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Fuchsia",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Fuchsia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Pink",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Zinc Rose",
+                "mode": "Dark",
+                "tone": "Zinc",
+                "accent": "Rose",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-zinc-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Red",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Orange",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Amber",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Yellow",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Yellow",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Lime",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Lime",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Green",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Emerald",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Emerald",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Teal",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Teal",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Cyan",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Sky",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Blue",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Indigo",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Violet",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Violet",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Purple",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Fuchsia",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Fuchsia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Pink",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Neutral Rose",
+                "mode": "Dark",
+                "tone": "Neutral",
+                "accent": "Rose",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-neutral-rose-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Red",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Red",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-red-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Orange",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Orange",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-orange-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Amber",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Amber",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-amber-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Yellow",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Yellow",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-yellow-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Lime",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Lime",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-lime-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Green",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Green",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-green-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Emerald",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Emerald",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-emerald-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Teal",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Teal",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-teal-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Cyan",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Cyan",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-cyan-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Sky",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Sky",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-sky-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Blue",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Blue",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-blue-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Indigo",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Indigo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-indigo-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Violet",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Violet",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-violet-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Purple",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Purple",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-purple-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Fuchsia",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Fuchsia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-fuchsia-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Pink",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Pink",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-pink-color-theme.json"
+            },
+            {
+                "label": "Airfoil Dark Stone Rose",
+                "mode": "Dark",
+                "tone": "Stone",
+                "accent": "Rose",
+                "uiTheme": "vs-dark",
+                "path": "./themes/airfoil-dark-stone-rose-color-theme.json"
             }
         ]
     },
