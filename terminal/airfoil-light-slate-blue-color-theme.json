@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#60A5FA",
+    "cursorColor": "#2563EB",
     "cyan": "#0E7490",
     "foreground": "#334155",
     "green": "#15803D",
     "name": "Airfoil Light Slate Blue",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#60A5FA",
+    "selectionBackground": "#2563EB",
     "white": "#404040",
     "yellow": "#A16207"
 }

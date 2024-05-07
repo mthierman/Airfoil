@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#A3E635",
+    "cursorColor": "#65A30D",
     "cyan": "#0E7490",
     "foreground": "#3F3F46",
     "green": "#15803D",
     "name": "Airfoil Light Zinc Lime",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#A3E635",
+    "selectionBackground": "#65A30D",
     "white": "#404040",
     "yellow": "#A16207"
 }

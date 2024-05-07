@@ -17,7 +17,9 @@ export default (theme: ThemeManifest): Theme => {
             accent: theme.accent.toLowerCase() as keyof DefaultColors,
             tone: theme.tone.toLowerCase() as keyof DefaultColors,
         },
-        accent: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][400]}`,
+        accent: isDark
+            ? `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][400]}`
+            : `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][600]}`,
         background: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 900 : 100]}`,
         background2: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 800 : 200]}`,
         border: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 700 : 300]}`,

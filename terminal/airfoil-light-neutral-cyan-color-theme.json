@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#22D3EE",
+    "cursorColor": "#0891B2",
     "cyan": "#0E7490",
     "foreground": "#404040",
     "green": "#15803D",
     "name": "Airfoil Light Neutral Cyan",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#22D3EE",
+    "selectionBackground": "#0891B2",
     "white": "#404040",
     "yellow": "#A16207"
 }
