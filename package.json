@@ -1404,11 +1404,11 @@
         "vsce": "vsce publish"
     },
     "devDependencies": {
-        "@types/node": "^20.11.28",
-        "@vscode/vsce": "^2.24.0",
-        "esbuild": "^0.20.2",
+        "@types/node": "^20.12.10",
+        "@vscode/vsce": "^2.26.1",
+        "esbuild": "^0.21.0",
         "prettier": "^3.2.5",
-        "tailwindcss": "^3.4.1",
-        "typescript": "^5.4.2"
+        "tailwindcss": "^3.4.3",
+        "typescript": "^5.4.5"
     }
 }
