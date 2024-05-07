@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#0284C7",
+    "cursorColor": "#0EA5E9",
     "cyan": "#0E7490",
     "foreground": "#3F3F46",
     "green": "#15803D",
     "name": "Airfoil Light Zinc Sky",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#0284C7",
+    "selectionBackground": "#0EA5E9",
     "white": "#404040",
     "yellow": "#A16207"
 }

@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#0891B2",
+    "cursorColor": "#06B6D4",
     "cyan": "#0E7490",
     "foreground": "#44403C",
     "green": "#15803D",
     "name": "Airfoil Light Stone Cyan",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#0891B2",
+    "selectionBackground": "#06B6D4",
     "white": "#404040",
     "yellow": "#A16207"
 }

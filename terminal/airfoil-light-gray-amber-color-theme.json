@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#D97706",
+    "cursorColor": "#F59E0B",
     "cyan": "#0E7490",
     "foreground": "#374151",
     "green": "#15803D",
     "name": "Airfoil Light Gray Amber",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#D97706",
+    "selectionBackground": "#F59E0B",
     "white": "#404040",
     "yellow": "#A16207"
 }

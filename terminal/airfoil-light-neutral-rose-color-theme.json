@@ -10,14 +10,14 @@
     "brightRed": "#DC2626",
     "brightWhite": "#525252",
     "brightYellow": "#CA8A04",
-    "cursorColor": "#E11D48",
+    "cursorColor": "#F43F5E",
     "cyan": "#0E7490",
     "foreground": "#404040",
     "green": "#15803D",
     "name": "Airfoil Light Neutral Rose",
     "purple": "#BE185D",
     "red": "#B91C1C",
-    "selectionBackground": "#E11D48",
+    "selectionBackground": "#F43F5E",
     "white": "#404040",
     "yellow": "#A16207"
 }
