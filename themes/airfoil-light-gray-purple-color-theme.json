@@ -51,7 +51,7 @@
         "commandCenter.inactiveForeground": "#374151",
         "debugConsole.errorForeground": "#b91c1c",
         "debugConsole.infoForeground": "#9333ea",
-        "debugConsole.sourceForeground": "#047857",
+        "debugConsole.sourceForeground": "#b91c1c",
         "debugConsole.warningForeground": "#a16207",
         "debugConsoleInputIcon.foreground": "#374151",
         "debugExceptionWidget.background": "#b91c1c40",
@@ -552,7 +552,7 @@
                 "comment.line"
             ],
             "settings": {
-                "foreground": "#047857"
+                "foreground": "#b91c1c"
             }
         },
         {

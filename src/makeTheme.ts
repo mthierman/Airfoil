@@ -23,7 +23,7 @@ export default (theme: ThemeManifest): Theme => {
         background: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 900 : 100]}`,
         background2: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 800 : 200]}`,
         border: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 700 : 300]}`,
-        comment: tailwind.emerald[isDark ? 400 : 700],
+        comment: tailwind.red[isDark ? 400 : 700],
         dim: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][500]}`,
         error: tailwind.red[scale],
         focus: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][isDark ? 800 : 300]}4D`,
