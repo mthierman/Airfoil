@@ -1,48 +1,45 @@
-import * as esbuild from "esbuild";
-import { fork } from "node:child_process";
-import { dirname, join, resolve } from "node:path";
-import { exit, stdin, stdout } from "node:process";
-import * as readline from "node:readline/promises";
+import { exec } from "node:child_process";
+import { watch } from "node:fs/promises";
+import { resolve } from "node:path";
+import { stdin, stdout } from "node:process";
+import { createInterface } from "node:readline/promises";
 
-export default async (script: string) => {
-    const root = dirname(import.meta.dirname);
-    const scripts = resolve(root, "scripts");
-    const outdir = resolve(root, "build");
+function build() {
+    console.clear();
+    console.log(`Building... ${new Date().toLocaleTimeString("en-US", { hour12: false })}`);
+    exec(`pnpm build`);
+}
 
-    const plugin: esbuild.Plugin = {
-        name: "exec",
-        setup(build) {
-            build.onEnd(async (result) => {
-                const date = new Date();
-                console.log(`\n  ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+const cli = createInterface(stdin, stdout);
 
-                if (result.metafile) {
-                    console.log(await esbuild.analyzeMetafile(result.metafile));
-                }
+cli.on("close", () => {
+    console.log("Shutting down...");
+    process.exit();
+});
 
-                fork(join(outdir, `${script}.js`));
-            });
-        },
-    };
+build();
 
-    const ctx = await esbuild.context({
-        entryPoints: [join(scripts, `${script}.ts`)],
-        bundle: true,
-        outdir: outdir,
-        platform: "node",
-        format: "esm",
-        packages: "external",
-        plugins: [plugin],
-        metafile: true,
-    });
+const watcher = watch(resolve(import.meta.dirname, "..", "..", "scripts", "airfoil.ts"), {
+    persistent: true,
+});
 
-    await ctx.watch();
+let watching = true;
 
-    const cli = readline.createInterface(stdin, stdout);
+try {
+    for await (const _ of watcher) {
+        if (!watching) {
+            build();
+        }
 
-    await cli.on("close", () => {
-        console.log("Exiting...");
-        ctx.dispose();
-        exit();
-    });
-};
+        watching = true;
+
+        setTimeout(() => {
+            watching = false;
+        }, 50);
+    }
+} catch (error) {
+    console.log(error);
+    if (error instanceof Error) {
+        console.error(error.message);
+    }
+}
