@@ -1,4 +1,3 @@
-// import Color from "colorjs.io";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { generateTerminal, generateTheme, makeTheme } from "../modules/generators.mjs";
