@@ -1,8 +1,32 @@
+import Color from "colorjs.io";
+import { mkdir, writeFile } from "node:fs/promises";
+import { resolve } from "node:path";
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
 
 type Mode = "Dark" | "Light";
 
 type Scale = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
+
+type Tone = "Slate" | "Gray" | "Zinc" | "Neutral" | "Stone";
+
+type Accent =
+    | "Red"
+    | "Orange"
+    | "Amber"
+    | "Yellow"
+    | "Lime"
+    | "Green"
+    | "Emerald"
+    | "Teal"
+    | "Cyan"
+    | "Sky"
+    | "Blue"
+    | "Indigo"
+    | "Violet"
+    | "Purple"
+    | "Fuchsia"
+    | "Pink"
+    | "Rose";
 
 interface Theme {
     name: string;
@@ -52,27 +76,8 @@ interface Theme {
 type ThemeManifest = {
     label: string;
     mode: Mode;
-    tone: "Slate" | "Gray" | "Zinc" | "Neutral" | "Stone";
-    accent:
-        | "Red"
-        | "Orange"
-        | "Amber"
-        | "Yellow"
-        | "Lime"
-        | "Green"
-        | "Emerald"
-        | "Teal"
-        | "Cyan"
-        | "Sky"
-        | "Blue"
-        | "Indigo"
-        | "Violet"
-        | "Purple"
-        | "Fuchsia"
-        | "Pink"
-        | "Rose";
+    tone: Tone;
+    accent: Accent;
     uiTheme: "vs-dark" | "vs";
     path: string;
 };
-
-export type { DefaultColors, Mode, Scale, Theme, ThemeManifest };
