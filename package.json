@@ -1398,9 +1398,10 @@
         "url": "https://github.com/mthierman/Airfoil.git"
     },
     "scripts": {
-        "check": "tsc",
-        "dev": "esbuild scripts/dev.ts --bundle --outdir=build --platform=node --format=esm --packages=external && node build/dev.js",
-        "build": "tsc && esbuild scripts/build.ts --bundle --outdir=build --platform=node --format=esm --packages=external && node build/build.js",
+        "check": "tsc --noEmit",
+        "build": "tsc -b && node --no-warnings=ExperimentalWarning build/airfoil.js",
+        "watch": "tsc -b && node --no-warnings=ExperimentalWarning build/watch.js",
+        "clean": "tsc -b && node --no-warnings=ExperimentalWarning build/clean.js",
         "vsce": "vsce publish"
     },
     "devDependencies": {

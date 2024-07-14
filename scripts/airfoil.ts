@@ -2,9 +2,9 @@ import Color from "colorjs.io";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import type { DefaultColors } from "tailwindcss/types/generated/colors";
+import type { DefaultColors } from "tailwindcss/types/generated/colors.js";
 import manifest from "../package.json" with { type: "json" };
-import tailwindConfig from "../tailwind.config";
+import tailwindConfig from "../tailwind.config.js";
 
 type Mode = "Dark" | "Light";
 
