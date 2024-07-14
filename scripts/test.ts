@@ -23,7 +23,7 @@ interface TailwindColor {
 }
 
 function toColor(color: TailwindColor): TailwindColor {
-    const copy = { ...color };
+    const copy = Object.assign({}, color);
     for (const [key, value] of Object.entries(color)) {
         copy[key] = new Color(value);
     }
@@ -31,7 +31,7 @@ function toColor(color: TailwindColor): TailwindColor {
 }
 
 function toHex(color: TailwindColor): TailwindColor {
-    const copy = { ...color };
+    const copy = Object.assign({}, color);
     for (const [key, value] of Object.entries(color)) {
         copy[key] = value.toString({ format: "hex" });
     }
