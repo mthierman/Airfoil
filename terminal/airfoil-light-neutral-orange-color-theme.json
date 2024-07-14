@@ -1,0 +1,23 @@
+{
+    "background": "#F5F5F5",
+    "black": "#404040",
+    "blue": "#1D4ED8",
+    "brightBlack": "#525252",
+    "brightBlue": "#2563EB",
+    "brightCyan": "#0891B2",
+    "brightGreen": "#16A34A",
+    "brightPurple": "#DB2777",
+    "brightRed": "#DC2626",
+    "brightWhite": "#525252",
+    "brightYellow": "#CA8A04",
+    "cursorColor": "#EA580C",
+    "cyan": "#0E7490",
+    "foreground": "#404040",
+    "green": "#15803D",
+    "name": "Airfoil Light Neutral Orange",
+    "purple": "#BE185D",
+    "red": "#B91C1C",
+    "selectionBackground": "#EA580C",
+    "white": "#404040",
+    "yellow": "#A16207"
+}
