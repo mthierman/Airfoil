@@ -1400,6 +1400,7 @@
     "scripts": {
         "check": "tsc --noEmit",
         "build": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/airfoil.js",
+        "manifest": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/manifest.js",
         "watch": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/watch.js",
         "clean": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/clean.js",
         "vsce": "vsce publish"
