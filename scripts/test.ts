@@ -3,11 +3,6 @@ import resolveConfig from "tailwindcss/resolveConfig.js";
 import type { DefaultColors, Theme, ThemeInfo } from "../modules/types.mjs";
 import tailwindConfig from "../tailwind.config.js";
 
-type ConvertParams = {
-    colors: Record<string, Color | string>;
-    format: "hex" | "Color";
-};
-
 function convertColor(colors: Record<string, Color | string>, format: "hex" | "Color") {
     Object.entries(colors).forEach(([key, value]: [string, Color | string]) => {
         switch (format) {
