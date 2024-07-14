@@ -1,6 +1,6 @@
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import type { Accent, Contribution, Mode, Tone } from "../modules/types.mjs";
+import type { Accent, Mode, ThemeInfo, Tone } from "../modules/types.mjs";
 import manifest from "../package.json" with { type: "json" };
 
 const modes: Mode[] = ["Light", "Dark"];
@@ -25,7 +25,7 @@ const accents: Accent[] = [
     "Rose",
 ];
 
-const themes: Contribution[] = [];
+const themes: ThemeInfo[] = [];
 
 for (const mode of modes) {
     for (const tone of tones) {

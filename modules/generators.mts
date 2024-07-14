@@ -1,8 +1,8 @@
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { DefaultColors, Theme, ThemeManifest } from "./types.mjs";
+import type { DefaultColors, Theme, ThemeInfo } from "./types.mjs";
 
-export const makeTheme = (theme: ThemeManifest): Theme => {
+export const makeTheme = (theme: ThemeInfo): Theme => {
     const tailwind = resolveConfig(tailwindConfig).theme.colors;
     const isDark = theme.mode === "Dark";
     const terminalScale = isDark ? 500 : 700;
@@ -10,14 +10,12 @@ export const makeTheme = (theme: ThemeManifest): Theme => {
     const scale = isDark ? 300 : 700;
 
     return {
-        name: theme.label,
-        filename: `airfoil-${theme.mode.toLowerCase()}-${theme.tone.toLowerCase()}-${theme.accent.toLowerCase()}-color-theme.json`,
-        mode: theme.mode,
+        ...theme,
         keys: {
             accent: theme.accent.toLowerCase() as keyof DefaultColors,
             tone: theme.tone.toLowerCase() as keyof DefaultColors,
         },
-        accent: isDark
+        accentColor: isDark
             ? `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][400]}`
             : `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][600]}`,
         background: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 900 : 100]}`,
@@ -74,7 +72,7 @@ export const generateTerminal = (theme: Theme) => {
         cyan: theme.terminal.cyan.toUpperCase(),
         foreground: theme.foreground.toUpperCase(),
         green: theme.terminal.green.toUpperCase(),
-        name: theme.name,
+        name: theme.label,
         purple: theme.terminal.magenta.toUpperCase(),
         red: theme.terminal.red.toUpperCase(),
         selectionBackground: theme.accent.toUpperCase(),
@@ -86,7 +84,7 @@ export const generateTerminal = (theme: Theme) => {
 export const generateTheme = (theme: Theme) => {
     return {
         $schema: "vscode://schemas/color-theme",
-        name: theme.name,
+        name: theme.label,
         semanticHighlighting: true,
         colors: {
             "activityBar.activeBackground": theme.transparent,

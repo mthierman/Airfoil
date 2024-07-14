@@ -25,15 +25,21 @@ export type Accent =
     | "Pink"
     | "Rose";
 
-export interface Theme {
-    name: string;
-    filename: string;
+export type ThemeInfo = {
+    label: string;
     mode: Mode;
+    tone: Tone;
+    accent: Accent;
+    uiTheme: "vs-dark" | "vs";
+    path: string;
+};
+
+export interface Theme extends ThemeInfo {
     keys: {
         accent: keyof DefaultColors;
         tone: keyof DefaultColors;
     };
-    accent: string;
+    accentColor: string;
     background: string;
     background2: string;
     border: string;
@@ -69,14 +75,5 @@ export interface Theme {
         yellow: string;
     };
 }
-
-export type Contribution = {
-    label: string;
-    mode: Mode;
-    tone: Tone;
-    accent: Accent;
-    uiTheme: "vs-dark" | "vs";
-    path: string;
-};
 
 export type { DefaultColors };
