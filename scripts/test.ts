@@ -7,50 +7,35 @@ type Tailwind = Omit<DefaultColors, "inherit" | "current" | "transparent" | "bla
     transparent?: "#00000000";
 };
 
-export type Scale =
-    | "50"
-    | "100"
-    | "200"
-    | "300"
-    | "400"
-    | "500"
-    | "600"
-    | "700"
-    | "800"
-    | "900"
-    | "950";
+interface TailwindColor {
+    [index: string]: string | Color;
+    "50": string | Color;
+    "100": string | Color;
+    "200": string | Color;
+    "300": string | Color;
+    "400": string | Color;
+    "500": string | Color;
+    "600": string | Color;
+    "700": string | Color;
+    "800": string | Color;
+    "900": string | Color;
+    "950": string | Color;
+}
 
-export type Tone = "Slate" | "Gray" | "Zinc" | "Neutral" | "Stone";
+function toColor(color: TailwindColor): TailwindColor {
+    const copy = { ...color };
+    for (const [key, value] of Object.entries(color)) {
+        copy[key] = new Color(value);
+    }
+    return copy;
+}
 
-export type Accent =
-    | "Red"
-    | "Orange"
-    | "Amber"
-    | "Yellow"
-    | "Lime"
-    | "Green"
-    | "Emerald"
-    | "Teal"
-    | "Cyan"
-    | "Sky"
-    | "Blue"
-    | "Indigo"
-    | "Violet"
-    | "Purple"
-    | "Fuchsia"
-    | "Pink"
-    | "Rose";
-
-function convertColor(colors: Record<string, Color | string>) {
-    Object.entries(colors).forEach(([key, value]: [string, Color | string]) => {
-        if (value instanceof Color) {
-            colors[key] = value.toString({ format: "hex" });
-        }
-        if (typeof value === "string") {
-            colors[key] = new Color(value);
-        }
-    });
-    return colors;
+function toHex(color: TailwindColor): TailwindColor {
+    const copy = { ...color };
+    for (const [key, value] of Object.entries(color)) {
+        copy[key] = value.toString({ format: "hex" });
+    }
+    return copy;
 }
 
 const { inherit, current, transparent, black, white, ...colors } =
@@ -58,5 +43,8 @@ const { inherit, current, transparent, black, white, ...colors } =
 const tailwind: Tailwind = { ...colors };
 
 // console.log(convertColor(tailwind));
-const amber = convertColor(tailwind.amber);
-console.log(amber);
+const amberHex = tailwind.amber as TailwindColor;
+const amberColors = toColor(amberHex);
+console.log(toHex(amberColors));
+// console.log(stringAmber);
+// console.log(amber);
