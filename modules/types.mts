@@ -25,6 +25,13 @@ export type Accent =
     | "Pink"
     | "Rose";
 
+export type Tailwind = Omit<
+    DefaultColors,
+    "inherit" | "current" | "transparent" | "black" | "white"
+> & {
+    transparent?: string;
+};
+
 export type ThemeInfo = {
     label: string;
     mode: Mode;
@@ -57,6 +64,7 @@ export interface Theme extends ThemeInfo {
     warning: string;
     tailwind: DefaultColors;
     terminal: {
+        background?: string;
         black: string;
         blue: string;
         brightBlack: string;
@@ -67,10 +75,13 @@ export interface Theme extends ThemeInfo {
         brightRed: string;
         brightWhite: string;
         brightYellow: string;
+        cursor?: string;
         cyan: string;
+        foreground?: string;
         green: string;
         magenta: string;
         red: string;
+        selectionBackground?: string;
         white: string;
         yellow: string;
     };
