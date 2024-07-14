@@ -3,6 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import type { DefaultColors } from "tailwindcss/types/generated/colors";
+import manifest from "../package.json" with { type: "json" };
 import tailwindConfig from "../tailwind.config";
 
 type Mode = "Dark" | "Light";
@@ -1121,3 +1122,56 @@ const generateTheme = (theme: Theme) => {
         },
     };
 };
+
+const outdir = {
+    themes: resolve(import.meta.dirname, "..", "themes"),
+    terminal: resolve(import.meta.dirname, "..", "terminal"),
+};
+
+const themes = manifest.contributes.themes as ThemeManifest[];
+
+mkdir(outdir.themes, { recursive: true })
+    .then(() => {
+        let promise: Promise<void>[] = [];
+
+        for (const theme of themes) {
+            promise.push(
+                writeFile(
+                    resolve(import.meta.dirname, "..", theme.path),
+                    JSON.stringify(generateTheme(makeTheme(theme)), null, 4),
+                ),
+            );
+        }
+
+        Promise.all(promise);
+    })
+    .catch(() => process.exit(1));
+
+mkdir(outdir.terminal, { recursive: true })
+    .then(() => {
+        let promise: Promise<void>[] = [];
+        let all: unknown[] = [];
+
+        for (const theme of themes) {
+            promise.push(
+                writeFile(
+                    resolve(
+                        import.meta.dirname,
+                        "..",
+                        theme.path.replace("./themes/", "./terminal/"),
+                    ),
+                    JSON.stringify(generateTerminal(makeTheme(theme)), null, 4),
+                ),
+            );
+
+            all.push(generateTerminal(makeTheme(theme)));
+        }
+
+        Promise.all(promise).then(() => {
+            writeFile(
+                resolve(import.meta.dirname, "..", "terminal", "all.json"),
+                JSON.stringify(all, null, 4),
+            );
+        });
+    })
+    .catch(() => process.exit(1));
