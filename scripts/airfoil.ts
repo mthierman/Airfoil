@@ -1,8 +1,8 @@
-import Color from "colorjs.io";
+// import Color from "colorjs.io";
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { generateTerminal, generateTheme, makeTheme } from "../modules/generators.mjs";
-import type { ThemeManifest } from "../modules/types.mjs";
+import type { Contribution } from "../modules/types.mjs";
 import manifest from "../package.json" with { type: "json" };
 
 const outdir = {
@@ -10,7 +10,7 @@ const outdir = {
     terminal: resolve(import.meta.dirname, "..", "..", "terminal"),
 };
 
-const themes = manifest.contributes.themes as ThemeManifest[];
+const themes = manifest.contributes.themes as Contribution[];
 
 await mkdir(outdir.themes, { recursive: true });
 

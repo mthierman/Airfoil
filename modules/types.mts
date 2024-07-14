@@ -70,7 +70,7 @@ export interface Theme {
     };
 }
 
-export type ThemeManifest = {
+export type Contribution = {
     label: string;
     mode: Mode;
     tone: Tone;
