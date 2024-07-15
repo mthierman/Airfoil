@@ -35,55 +35,71 @@ export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent 
     };
 };
 
-// export const makeTheme = (theme: ThemeInfo): Theme => {
-//     const tailwind = resolveConfig(tailwindConfig).theme.colors;
-//     const isDark = theme.mode === "Dark";
-//     const terminalScale = isDark ? 500 : 700;
-//     const terminalBrightScale = isDark ? 400 : 600;
-//     const scale = isDark ? 300 : 700;
+export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
+    const tw = resolveConfig(tailwindConfig).theme.colors;
+    const key = {
+        tone: tone.toLowerCase() as keyof DefaultColors,
+        accent: accent.toLowerCase() as keyof DefaultColors,
+    };
 
-//     return {
-//         ...theme,
-//         keys: {
-//             accent: theme.accent.toLowerCase() as keyof DefaultColors,
-//             tone: theme.tone.toLowerCase() as keyof DefaultColors,
-//         },
-//         accentColor: isDark
-//             ? `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][400]}`
-//             : `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][600]}`,
-//         background: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 900 : 100]}`,
-//         background2: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 800 : 200]}`,
-//         border: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 700 : 300]}`,
-//         comment: tailwind.red[isDark ? 400 : 700],
-//         dim: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][500]}`,
-//         error: tailwind.red[scale],
-//         focus: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][isDark ? 800 : 300]}4D`,
-//         foreground: `${tailwind[theme.tone.toLowerCase() as keyof DefaultColors][isDark ? 300 : 700]}`,
-//         hover: `${tailwind[theme.accent.toLowerCase() as keyof DefaultColors][isDark ? 800 : 300]}33`,
-//         scale: scale,
-//         shadow: "#00000033",
-//         success: tailwind.green[scale],
-//         test: tailwind.pink[scale],
-//         transparent: isDark ? "#00000000" : "#FFFFFF00",
-//         warning: tailwind.yellow[scale],
-//         tailwind: tailwind,
-//         terminal: {
-//             black: tailwind.neutral[terminalScale],
-//             blue: tailwind.blue[terminalScale],
-//             brightBlack: tailwind.neutral[terminalBrightScale],
-//             brightBlue: tailwind.blue[terminalBrightScale],
-//             brightCyan: tailwind.cyan[terminalBrightScale],
-//             brightGreen: tailwind.green[terminalBrightScale],
-//             brightMagenta: tailwind.pink[terminalBrightScale],
-//             brightRed: tailwind.red[terminalBrightScale],
-//             brightWhite: tailwind.neutral[terminalBrightScale],
-//             brightYellow: tailwind.yellow[terminalBrightScale],
-//             cyan: tailwind.cyan[terminalScale],
-//             green: tailwind.green[terminalScale],
-//             magenta: tailwind.pink[terminalScale],
-//             red: tailwind.red[terminalScale],
-//             white: tailwind.neutral[terminalScale],
-//             yellow: tailwind.yellow[terminalScale],
-//         },
-//     };
-// };
+    const terminal = makeTerminal(mode, tone, accent);
+
+    switch (mode) {
+        case "Dark": {
+            return {
+                key: {
+                    ...key,
+                },
+                theme: {
+                    accentColor: new Color(tw[key.accent]["400"]),
+                    background: new Color(tw[key.tone]["900"]),
+                    background2: new Color(tw[key.tone]["800"]),
+                    border: new Color(tw[key.tone]["700"]),
+                    comment: new Color(tw.red["400"]),
+                    dim: new Color(tw[key.tone]["500"]),
+                    error: new Color(tw.red["400"]),
+                    focus: new Color(tw[key.accent]["800"]),
+                    foreground: new Color(tw[key.tone]["300"]),
+                    hover: new Color(tw[key.accent]["800"].concat("33")),
+                    shadow: new Color(tw[key.tone]["950"].concat("33")),
+                    success: new Color(tw.green[400]),
+                    test: new Color(tw.pink["400"]),
+                    transparent: new Color("sRGB", [0, 0, 0], 0),
+                    warning: new Color(tw.yellow[400]),
+                },
+                tailwind: tw,
+                terminal: {
+                    ...terminal,
+                },
+            };
+        }
+        case "Light": {
+            return {
+                key: {
+                    ...key,
+                },
+                theme: {
+                    accentColor: new Color(tw[key.accent]["600"]),
+                    background: new Color(tw[key.tone]["100"]),
+                    background2: new Color(tw[key.tone]["200"]),
+                    border: new Color(tw[key.tone]["300"]),
+                    comment: new Color(tw.red["700"]),
+                    dim: new Color(tw[key.tone]["500"]),
+                    error: new Color(tw.red["400"]),
+                    focus: new Color(tw[key.accent]["300"]),
+                    foreground: new Color(tw[key.tone]["700"]),
+                    hover: new Color(tw[key.accent]["300"].concat("33")),
+                    shadow: new Color(tw[key.tone]["50"].concat("80")),
+                    success: new Color(tw.green[400]),
+                    test: new Color(tw.pink["400"]),
+                    transparent: new Color("sRGB", [255, 255, 255], 0),
+                    warning: new Color(tw.yellow[400]),
+                },
+                tailwind: tw,
+                terminal: {
+                    ...terminal,
+                },
+            };
+        }
+    }
+};
