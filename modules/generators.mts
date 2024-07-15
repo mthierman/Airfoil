@@ -1,6 +1,39 @@
 import resolveConfig from "tailwindcss/resolveConfig.js";
+import type { Accent, Scale, Tone } from "../modules/types.mjs";
+import { accents, modes, scales, tones } from "../modules/types.mjs";
+import manifest from "../package.json" with { type: "json" };
 import tailwindConfig from "../tailwind.config.js";
 import type { DefaultColors, Theme, ThemeInfo } from "./types.mjs";
+
+export const generateManifest = () => {
+    const themes = [];
+
+    for (const mode of modes) {
+        for (const tone of tones) {
+            for (const accent of accents) {
+                themes.push({
+                    label: `Airfoil ${mode} ${tone} ${accent}`,
+                    mode: `${mode}`,
+                    tone: `${tone}`,
+                    accent: `${accent}`,
+                    uiTheme: mode === "Light" ? "vs" : "vs-dark",
+                    path: `./themes/airfoil-${mode.toLowerCase()}-${tone.toLowerCase()}-${accent.toLowerCase()}-color-theme.json`,
+                });
+            }
+        }
+    }
+
+    return JSON.stringify(
+        {
+            ...manifest,
+            contributes: {
+                themes: [...themes],
+            },
+        },
+        null,
+        4,
+    );
+};
 
 export const makeTheme = (theme: ThemeInfo): Theme => {
     const tailwind = resolveConfig(tailwindConfig).theme.colors;
