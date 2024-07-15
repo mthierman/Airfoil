@@ -45,6 +45,7 @@ export const generateTerminal = (mode: Mode) => {
         name: `Airfoil ${mode}`,
         ...terminal,
     };
+
     return JSON.stringify(generatedTerminal, Object.keys(generatedTerminal).sort(), 4);
 };
 
