@@ -1,32 +1,37 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { DefaultColors, Mode, Theme, ThemeInfo, Tone } from "./types.mjs";
+import type { Accent, DefaultColors, Mode, Theme, ThemeInfo, Tone } from "./types.mjs";
 
-export const makeTerminal = (mode: Mode) => {
-    const tailwind = resolveConfig(tailwindConfig).theme.colors;
+export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent = "Blue") => {
+    const dark = mode === "Dark";
+    const tw = resolveConfig(tailwindConfig).theme.colors;
+    const key = {
+        tone: tone.toLowerCase() as keyof DefaultColors,
+        accent: accent.toLowerCase() as keyof DefaultColors,
+    };
 
     return {
-        background: mode === "Dark" ? tailwind.neutral["950"] : tailwind.neutral["50"],
-        black: tailwind.neutral[950],
-        blue: tailwind.blue[400],
-        brightBlack: tailwind.neutral[800],
-        brightBlue: tailwind.blue[400],
-        brightCyan: tailwind.cyan[400],
-        brightGreen: tailwind.green[400],
-        brightPurple: tailwind.purple[400],
-        brightRed: tailwind.red[400],
-        brightWhite: tailwind.neutral[50],
-        brightYellow: tailwind.yellow[400],
-        cursorColor: mode === "Dark" ? tailwind.neutral["50"] : tailwind.neutral["950"],
-        cyan: tailwind.cyan[400],
-        foreground: mode === "Dark" ? tailwind.neutral["50"] : tailwind.neutral["950"],
-        green: tailwind.green[400],
-        purple: tailwind.purple[400],
-        red: tailwind.red[400],
-        selectionBackground: tailwind.blue["400"],
-        white: tailwind.neutral[200],
-        yellow: tailwind.yellow[400],
+        background: dark ? tw[key.tone]["950"] : tw[key.tone]["50"],
+        black: tw[key.tone][950],
+        blue: tw.blue[400],
+        brightBlack: tw[key.tone][800],
+        brightBlue: tw.blue[400],
+        brightCyan: tw.cyan[400],
+        brightGreen: tw.green[400],
+        brightPurple: tw.purple[400],
+        brightRed: tw.red[400],
+        brightWhite: tw[key.tone][50],
+        brightYellow: tw.yellow[400],
+        cursorColor: dark ? tw[key.tone]["50"] : tw[key.tone]["950"],
+        cyan: tw.cyan[400],
+        foreground: dark ? tw[key.tone]["50"] : tw[key.tone]["950"],
+        green: tw.green[400],
+        purple: tw.purple[400],
+        red: tw.red[400],
+        selectionBackground: tw[key.tone]["400"],
+        white: tw[key.tone][200],
+        yellow: tw.yellow[400],
     };
 };
 
