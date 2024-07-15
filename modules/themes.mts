@@ -29,7 +29,7 @@ export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent 
         green: tw.green[400],
         purple: tw.purple[400],
         red: tw.red[400],
-        selectionBackground: tw[key.tone]["400"],
+        selectionBackground: tw[key.accent]["400"],
         white: tw[key.tone][200],
         yellow: tw.yellow[400],
     };
