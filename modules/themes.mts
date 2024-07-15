@@ -1,7 +1,7 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { Accent, DefaultColors, Mode, Theme, ThemeInfo, Tone } from "./types.mjs";
+import type { Accent, DefaultColors, Mode, Tone } from "./types.mjs";
 
 export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent = "Blue") => {
     const dark = mode === "Dark";
