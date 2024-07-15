@@ -1,7 +1,7 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { DefaultColors, Mode, Theme, ThemeInfo } from "./types.mjs";
+import type { DefaultColors, Mode, Theme, ThemeInfo, Tone } from "./types.mjs";
 
 export const makeTerminal = (mode: Mode) => {
     const tailwind = resolveConfig(tailwindConfig).theme.colors;
@@ -24,7 +24,7 @@ export const makeTerminal = (mode: Mode) => {
         green: tailwind.green[400],
         purple: tailwind.purple[400],
         red: tailwind.red[400],
-        selectionBackground: mode === "Dark" ? tailwind.neutral["200"] : tailwind.neutral["800"],
+        selectionBackground: tailwind.blue["400"],
         white: tailwind.neutral[200],
         yellow: tailwind.yellow[400],
     };

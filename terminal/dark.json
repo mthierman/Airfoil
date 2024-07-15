@@ -1,0 +1,23 @@
+{
+    "background": "#0a0a0a",
+    "black": "#0a0a0a",
+    "blue": "#60a5fa",
+    "brightBlack": "#262626",
+    "brightBlue": "#60a5fa",
+    "brightCyan": "#22d3ee",
+    "brightGreen": "#4ade80",
+    "brightPurple": "#c084fc",
+    "brightRed": "#f87171",
+    "brightWhite": "#fafafa",
+    "brightYellow": "#facc15",
+    "cursorColor": "#fafafa",
+    "cyan": "#22d3ee",
+    "foreground": "#fafafa",
+    "green": "#4ade80",
+    "name": "Airfoil Dark",
+    "purple": "#c084fc",
+    "red": "#f87171",
+    "selectionBackground": "#60a5fa",
+    "white": "#e5e5e5",
+    "yellow": "#facc15"
+}
