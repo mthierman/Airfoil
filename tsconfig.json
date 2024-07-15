@@ -9,5 +9,6 @@
         "skipLibCheck": true,
         "outDir": "build",
         "allowJs": true
-    }
+    },
+    "include": ["modules", "scripts"]
 }
