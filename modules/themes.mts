@@ -1,7 +1,34 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { DefaultColors, Theme, ThemeInfo } from "./types.mjs";
+import type { DefaultColors, Mode, Theme, ThemeInfo } from "./types.mjs";
+
+export const makeTerminal = (mode: Mode) => {
+    const tailwind = resolveConfig(tailwindConfig).theme.colors;
+
+    return {
+        // background: ui.main_background,
+        black: tailwind.neutral[950],
+        blue: tailwind.blue[400],
+        brightBlack: tailwind.neutral[800],
+        brightBlue: tailwind.blue[400],
+        brightCyan: tailwind.cyan[400],
+        brightGreen: tailwind.green[400],
+        brightPurple: tailwind.purple[400],
+        brightRed: tailwind.red[400],
+        brightWhite: tailwind.neutral[50],
+        brightYellow: tailwind.yellow[400],
+        // cursorColor: ui.primary_text,
+        cyan: tailwind.cyan[400],
+        // foreground: ui.primary_text,
+        green: tailwind.green[400],
+        purple: tailwind.purple[400],
+        red: tailwind.red[400],
+        // selectionBackground: ui.active_borders,
+        white: tailwind.neutral[200],
+        yellow: tailwind.yellow[400],
+    };
+};
 
 export const makeTheme = (theme: ThemeInfo): Theme => {
     const tailwind = resolveConfig(tailwindConfig).theme.colors;
