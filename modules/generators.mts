@@ -3,10 +3,6 @@ import type { Mode } from "../modules/types.mjs";
 import { accents, modes, tones } from "../modules/types.mjs";
 import { hex } from "../modules/utilities.mjs";
 import manifest from "../package.json" with { type: "json" };
-// import resolveConfig from "tailwindcss/resolveConfig.js";
-// import type { Accent, Scale, Tone } from "../modules/types.mjs";
-// import tailwindConfig from "../tailwind.config.js";
-// import type { DefaultColors, Theme, ThemeInfo } from "./types.mjs";
 
 export const generateManifest = () => {
     const themes = [];
