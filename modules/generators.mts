@@ -1,7 +1,7 @@
 import { makeTerminal, makeTheme } from "../modules/themes.mjs";
 import type { Accent, Mode, Tone, WorkbenchColors } from "../modules/types.mjs";
 import { accents, modes, tones } from "../modules/types.mjs";
-import { hex } from "../modules/utilities.mjs";
+import { colorsToHex } from "../modules/utilities.mjs";
 import manifest from "../package.json" with { type: "json" };
 
 export const generateManifest = () => {
@@ -35,7 +35,7 @@ export const generateManifest = () => {
 };
 
 export const generateTerminal = (mode: Mode) => {
-    const terminal = hex(makeTerminal(mode));
+    const terminal = colorsToHex(makeTerminal(mode));
 
     const generatedTerminal = {
         name: `Airfoil ${mode}`,
@@ -50,8 +50,8 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
     const { key, tw, terminal, theme } = {
         key: createdTheme.key,
         tw: createdTheme.twHex,
-        terminal: hex(createdTheme.terminal),
-        theme: hex(createdTheme.theme),
+        terminal: colorsToHex(createdTheme.terminal),
+        theme: colorsToHex(createdTheme.theme),
     };
     const test = "#FF00FF";
 
