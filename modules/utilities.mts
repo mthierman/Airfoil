@@ -17,7 +17,7 @@ export const transparent = (color: Color, alpha: number) => {
     return clone;
 };
 
-const twHexToColor = <T extends Record<Scale, string>>(colors: T) => {
+const tailwindStringsToColors = <T extends Record<Scale, string>>(colors: T) => {
     return Object.fromEntries(
         Object.entries(colors).map(([key, value]) => [key, new Color(value)]),
     ) as Record<keyof T, Color>;
@@ -25,6 +25,6 @@ const twHexToColor = <T extends Record<Scale, string>>(colors: T) => {
 
 export const makeTailwindColors = <T extends Record<string, Record<Scale, string>>>(colors: T) => {
     return Object.fromEntries(
-        Object.entries(colors).map(([key, value]) => [key, twHexToColor(value)]),
+        Object.entries(colors).map(([key, value]) => [key, tailwindStringsToColors(value)]),
     ) as Record<keyof T, Record<Scale, Color>>;
 };
