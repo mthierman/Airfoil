@@ -1,11 +1,8 @@
 import { makeTerminal, makeTheme } from "../modules/themes.mjs";
-import type { Accent, Mode, Scale, Tone } from "../modules/types.mjs";
+import type { Accent, Mode, Tone, WorkbenchColors } from "../modules/types.mjs";
 import { accents, modes, tones } from "../modules/types.mjs";
 import { hex } from "../modules/utilities.mjs";
 import manifest from "../package.json" with { type: "json" };
-import workbenchColors from "../schema/workbench_colors.json" with { type: "json" };
-
-type WorkbenchColors = Partial<Record<keyof typeof workbenchColors.properties, string>>;
 
 export const generateManifest = () => {
     const themes = [];
