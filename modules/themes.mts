@@ -31,30 +31,34 @@ export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent 
         accent: accent.toLowerCase() as keyof typeof tw,
     };
 
-    const brightColorScale = "500";
-    const colorScale = "400";
+    const scale: { [key: string]: Scale } = {
+        bg: dark ? "950" : "50",
+        fg: dark ? "50" : "950",
+        color: "400",
+        brightColor: "500",
+    };
 
     return {
-        background: dark ? tw[key.tone]["950"] : tw[key.tone]["50"],
+        background: tw[key.tone][scale.bg],
         black: tw[key.tone]["950"],
-        blue: tw.blue[colorScale],
+        blue: tw.blue[scale.color],
         brightBlack: tw[key.tone]["800"],
-        brightBlue: tw.blue[brightColorScale],
-        brightCyan: tw.cyan[brightColorScale],
-        brightGreen: tw.green[brightColorScale],
-        brightPurple: tw.purple[brightColorScale],
-        brightRed: tw.red[brightColorScale],
+        brightBlue: tw.blue[scale.brightColor],
+        brightCyan: tw.cyan[scale.brightColor],
+        brightGreen: tw.green[scale.brightColor],
+        brightPurple: tw.purple[scale.brightColor],
+        brightRed: tw.red[scale.brightColor],
         brightWhite: tw[key.tone]["50"],
-        brightYellow: tw.yellow[brightColorScale],
-        cursorColor: dark ? tw[key.tone]["50"] : tw[key.tone]["950"],
-        cyan: tw.cyan[colorScale],
-        foreground: dark ? tw[key.tone]["50"] : tw[key.tone]["950"],
-        green: tw.green[colorScale],
-        purple: tw.purple[colorScale],
-        red: tw.red[colorScale],
+        brightYellow: tw.yellow[scale.brightColor],
+        cursorColor: tw[key.tone][scale.fg],
+        cyan: tw.cyan[scale.color],
+        foreground: tw[key.tone][scale.fg],
+        green: tw.green[scale.color],
+        purple: tw.purple[scale.color],
+        red: tw.red[scale.color],
         selectionBackground: tw[key.accent]["400"],
         white: tw[key.tone]["200"],
-        yellow: tw.yellow[colorScale],
+        yellow: tw.yellow[scale.color],
     };
 };
 
