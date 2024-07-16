@@ -49,7 +49,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
             return {
                 key: {
                     ...key,
-                    scale: 300,
+                    scale: "300",
                 },
                 theme: {
                     accentColor: new Color(tw[key.accent]["400"]),
@@ -68,7 +68,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     transparent: new Color("sRGB", [0, 0, 0], 0),
                     warning: new Color(tw.yellow[400]),
                 },
-                tailwind: tw,
+                tw: tw,
                 terminal: {
                     ...terminal,
                 },
@@ -78,7 +78,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
             return {
                 key: {
                     ...key,
-                    scale: 700,
+                    scale: "700",
                 },
                 theme: {
                     accentColor: new Color(tw[key.accent]["600"]),
@@ -97,7 +97,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     transparent: new Color("sRGB", [255, 255, 255], 0),
                     warning: new Color(tw.yellow[400]),
                 },
-                tailwind: tw,
+                tw: tw,
                 terminal: {
                     ...terminal,
                 },
