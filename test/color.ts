@@ -1,44 +1,24 @@
 import Color from "colorjs.io";
-import resolveConfig from "tailwindcss/resolveConfig.js";
-import type { DefaultColors } from "tailwindcss/types/generated/colors.js";
-import tailwindConfig from "../tailwind.config.js";
+import { makeTailwind } from "../modules/themes.mjs";
+import type { Scale } from "../modules/types.mts";
 
-const makeTailwind = () => {
-    const tw = resolveConfig(tailwindConfig).theme.colors;
-    const {
-        inherit,
-        current,
-        transparent,
-        black,
-        white,
-        lightBlue,
-        warmGray,
-        trueGray,
-        coolGray,
-        blueGray,
-        ...colors
-    } = tw;
-    return colors;
+export const color = <T extends Record<Scale, string>>(colors: T) => {
+    return Object.fromEntries(
+        Object.entries(colors).map(([key, value]) => [key, new Color(value)]),
+    ) as Record<keyof T, Color>;
+};
+
+export const twToColors = <T extends Record<Scale, string>>(colors: T) => {
+    return Object.fromEntries(
+        Object.entries(colors).map(([key, value]) => [key, new Color(value)]),
+    ) as Record<keyof T, Color>;
 };
 
 const tw = makeTailwind();
-console.log(tw.red);
 
-// const scales = [
-//     "50",
-//     "100",
-//     "200",
-//     "300",
-//     "400",
-//     "500",
-//     "600",
-//     "700",
-//     "800",
-//     "900",
-//     "950",
-// ] as const;
+const convert = Object.fromEntries(Object.entries(tw).map(([key, value]) => [key, color(value)]));
 
-// type Scale = (typeof scales)[number];
+console.log(convert);
 
 // const hex = <T extends Record<Scale, string>>(colors: T) => {
 //     return Object.fromEntries(
