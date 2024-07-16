@@ -2,7 +2,7 @@ import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
 import type { Accent, DefaultColors, Mode, Scale, Tone } from "./types.mjs";
-import { makeTailwindColors } from "./utilities.mjs";
+import { glass, makeTailwindColors } from "./utilities.mjs";
 
 const makeTailwind = () => {
     const tw = resolveConfig(tailwindConfig).theme.colors;
@@ -87,27 +87,11 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     comment: tw.red["400"],
                     dim: tw[key.tone]["500"],
                     error: tw.red["400"],
-                    focus: (() => {
-                        const color = new Color(tw[key.accent]["800"]);
-                        color.alpha = 0.3;
-                        return color;
-                    })(),
+                    focus: glass(tw[key.accent]["800"], 0.3),
                     foreground: tw[key.tone]["300"],
-                    hover: (() => {
-                        const color = new Color(tw[key.accent]["800"]);
-                        color.alpha = 0.2;
-                        return color;
-                    })(),
-                    inactive: (() => {
-                        const color = new Color(tw[key.accent]["800"]);
-                        color.alpha = 0.15;
-                        return color;
-                    })(),
-                    shadow: (() => {
-                        const color = new Color(tw[key.tone]["950"]);
-                        color.alpha = 0.2;
-                        return color;
-                    })(),
+                    hover: glass(tw[key.accent]["800"], 0.2),
+                    inactive: glass(tw[key.accent]["800"], 0.15),
+                    shadow: glass(tw[key.tone]["950"], 0.2),
                     success: tw.green[400],
                     test: tw.pink["400"],
                     transparent: new Color("sRGB", [0, 0, 0], 0),
@@ -134,27 +118,11 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     comment: tw.red["700"],
                     dim: tw[key.tone]["500"],
                     error: tw.red["400"],
-                    focus: (() => {
-                        const color = new Color(tw[key.accent]["300"]);
-                        color.alpha = 0.3;
-                        return color;
-                    })(),
+                    focus: glass(tw[key.accent]["300"], 0.3),
                     foreground: tw[key.tone]["700"],
-                    hover: (() => {
-                        const color = new Color(tw[key.accent]["300"]);
-                        color.alpha = 0.2;
-                        return color;
-                    })(),
-                    inactive: (() => {
-                        const color = new Color(tw[key.accent]["300"]);
-                        color.alpha = 0.15;
-                        return color;
-                    })(),
-                    shadow: (() => {
-                        const color = new Color(tw[key.tone]["50"]);
-                        color.alpha = 0.5;
-                        return color;
-                    })(),
+                    hover: glass(tw[key.accent]["300"], 0.2),
+                    inactive: glass(tw[key.accent]["300"], 0.15),
+                    shadow: glass(tw[key.tone]["50"], 0.2),
                     success: tw.green[400],
                     test: tw.pink["400"],
                     transparent: new Color("sRGB", [255, 255, 255], 0),
