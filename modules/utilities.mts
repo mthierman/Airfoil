@@ -1,6 +1,10 @@
 import Color from "colorjs.io";
 import type { Scale } from "./types.mjs";
 
+export const toHex = (color: Color) => {
+    return color.toString({ format: "hex" });
+};
+
 export const colorsToHex = <T extends Record<string, Color>>(colors: T) => {
     return Object.fromEntries(
         Object.entries(colors).map(([key, value]) => [key, value.toString({ format: "hex" })]),
