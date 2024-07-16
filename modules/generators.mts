@@ -110,10 +110,9 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
         "debugConsole.sourceForeground": theme.comment,
         "debugConsole.warningForeground": theme.warning,
         "debugConsoleInputIcon.foreground": theme.foreground,
-        "debugExceptionWidget.background": theme.error.concat("40"),
+        "debugExceptionWidget.background": `${theme.error}40`,
         "debugExceptionWidget.border": theme.error,
-        // "debugIcon.breakpointCurrentStackframeForeground": theme.tailwind.green[theme.scale],
-        "debugIcon.breakpointCurrentStackframeForeground": tailwind.green["400"],
+        "debugIcon.breakpointCurrentStackframeForeground": theme.tailwind.green[theme.scale],
         "debugIcon.breakpointDisabledForeground": theme.dim,
         "debugIcon.breakpointForeground": theme.tailwind.red[theme.scale],
         "debugIcon.breakpointStackframeForeground": theme.tailwind.red[theme.scale],
@@ -543,6 +542,7 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
         "welcomePage.tileHoverBackground": theme.hover,
         "widget.border": theme.border,
         "widget.shadow": theme.shadow,
+
         // "editorOverviewRuler.addedForeground": test,
         // "editorOverviewRuler.commentForeground": test,
         // "editorOverviewRuler.commentUnresolvedForeground": test,
@@ -827,6 +827,199 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
         $schema: "vscode://schemas/color-theme",
         name: `Airfoil ${mode} ${tone} ${accent}`,
         colors: { ...colors },
+        tokenColors: [
+            {
+                scope: ["strong", "markup.bold", "markup.heading"],
+                settings: { fontStyle: "bold" },
+            },
+            {
+                scope: ["emphasis, markup.italic"],
+                settings: { fontStyle: "italic" },
+            },
+            {
+                scope: ["markup.underline"],
+                settings: { fontStyle: "underline" },
+            },
+            {
+                scope: ["markup.strikethrough"],
+                settings: { fontStyle: "strikethrough" },
+            },
+            {
+                scope: ["markup.inserted"],
+                settings: { foreground: theme.tailwind.green[theme.scale] },
+            },
+            {
+                scope: ["markup.deleted"],
+                settings: { foreground: theme.tailwind.red[theme.scale] },
+            },
+            {
+                scope: ["markup.changed"],
+                settings: { foreground: theme.tailwind.yellow[theme.scale] },
+            },
+            {
+                scope: ["comment", "comment.block", "comment.block.documentation", "comment.line"],
+                settings: {
+                    foreground: theme.comment,
+                },
+            },
+            {
+                scope: [
+                    "constant",
+                    "constant.character",
+                    "constant.character.escape",
+                    "constant.other",
+                    "constant.regexp",
+                    "constant.rgb-value",
+                ],
+                settings: {
+                    foreground: theme.tailwind.yellow[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "constant.numeric",
+                    "constant.numeric.integer",
+                    "constant.numeric.float",
+                    "constant.numeric.hex",
+                    "constant.numeric.octal",
+                ],
+                settings: {
+                    foreground: theme.tailwind.purple[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "entity",
+                    "entity.name",
+                    "entity.name.class",
+                    "entity.name.function",
+                    "entity.name.method",
+                    "entity.name.section",
+                    "entity.name.selector",
+                    "entity.name.tag",
+                    "entity.name.type",
+                    "entity.other",
+                    "entity.other.attribute-name",
+                    "entity.other.inherited-class",
+                    "punctuation.definition.heading",
+                ],
+                settings: {
+                    foreground: theme.tailwind.fuchsia[theme.scale],
+                },
+            },
+            {
+                scope: ["invalid", "invalid.deprecated", "invalid.illegal"],
+                settings: {
+                    foreground: theme.tailwind.red[theme.scale],
+                },
+            },
+            {
+                scope: ["keyword", "keyword.control", "keyword.other", "string.json"],
+                settings: {
+                    foreground: theme.tailwind.rose[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "keyword.operator",
+                    "keyword.operator.new",
+                    "keyword.operator.assignment",
+                    "keyword.operator.arithmetic",
+                    "keyword.operator.logical",
+                ],
+                settings: {
+                    foreground: theme.tailwind.neutral[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "meta",
+                    "meta.block",
+                    "meta.cast",
+                    "meta.class",
+                    "meta.function",
+                    "meta.function-call",
+                    "meta.preprocessor",
+                    "meta.return-type",
+                    "meta.selector",
+                    "meta.tag",
+                    "meta.type.annotation",
+                    "meta.type",
+                ],
+                settings: {
+                    foreground: theme.tailwind.indigo[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "punctuation.definition.string.begin",
+                    "punctuation.definition.string.end",
+                    "punctuation.separator",
+                    "punctuation.separator.continuation",
+                    "punctuation.terminator",
+                ],
+                settings: {
+                    foreground: theme.tailwind.neutral[theme.scale],
+                },
+            },
+            {
+                scope: ["storage", "storage.modifier", "storage.type"],
+                settings: {
+                    foreground: theme.tailwind.green[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "string",
+                    "string.interpolated",
+                    "string.other",
+                    "string.quoted",
+                    "string.quoted.double",
+                    "string.quoted.other",
+                    "string.quoted.single",
+                    "string.quoted.triple",
+                    "string.regexp",
+                    "string.unquoted",
+                ],
+                settings: {
+                    foreground: theme.tailwind.sky[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "support",
+                    "support.class",
+                    "support.constant",
+                    "support.function",
+                    "support.other",
+                    "support.type",
+                    "support.type.property-name",
+                    "support.variable",
+                ],
+                settings: {
+                    foreground: theme.tailwind.amber[theme.scale],
+                },
+            },
+            {
+                scope: [
+                    "variable",
+                    "variable.language",
+                    "variable.name",
+                    "variable.other",
+                    "variable.other.readwrite",
+                    "variable.parameter",
+                ],
+                settings: {
+                    foreground: theme.tailwind.blue[theme.scale],
+                },
+            },
+        ],
+        semanticTokenColors: {
+            newOperator: theme.tailwind.purple[theme.scale],
+            stringLiteral: theme.tailwind.red[theme.scale],
+            customLiteral: theme.tailwind.yellow[theme.scale],
+            numberLiteral: theme.tailwind.emerald[theme.scale],
+        },
     };
 
     return JSON.stringify(generatedTheme, null, 4);
