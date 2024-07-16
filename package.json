@@ -1406,10 +1406,9 @@
         "vsce": "vsce publish"
     },
     "devDependencies": {
-        "@types/node": "^20.14.10",
+        "@types/node": "^20.14.11",
         "@vscode/vsce": "^2.30.0",
         "colorjs.io": "^0.5.2",
-        "esbuild": "^0.23.0",
         "prettier": "^3.3.3",
         "tailwindcss": "^3.4.6",
         "typescript": "^5.5.3"
