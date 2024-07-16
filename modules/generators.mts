@@ -367,7 +367,7 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
         "quickInputList.focusIconForeground": theme.foreground,
         "scrollbar.shadow": theme.shadow,
         "scrollbarSlider.activeBackground": theme.focus,
-        "scrollbarSlider.background": theme.hover,
+        "scrollbarSlider.background": theme.inactive,
         "scrollbarSlider.hoverBackground": theme.hover,
         "search.resultsInfoForeground": tw.amber[key.scale],
         "selection.background": theme.focus,

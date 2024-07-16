@@ -88,20 +88,25 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     dim: tw[key.tone]["500"],
                     error: tw.red["400"],
                     focus: (() => {
-                        const focus = tw[key.accent]["800"];
-                        focus.alpha = 0.3;
-                        return focus;
+                        const color = new Color(tw[key.accent]["800"]);
+                        color.alpha = 0.3;
+                        return color;
                     })(),
                     foreground: tw[key.tone]["300"],
                     hover: (() => {
-                        const hover = tw[key.accent]["800"];
-                        hover.alpha = 0.2;
-                        return hover;
+                        const color = new Color(tw[key.accent]["800"]);
+                        color.alpha = 0.2;
+                        return color;
+                    })(),
+                    inactive: (() => {
+                        const color = new Color(tw[key.accent]["800"]);
+                        color.alpha = 0.15;
+                        return color;
                     })(),
                     shadow: (() => {
-                        const shadow = tw[key.tone]["950"];
-                        shadow.alpha = 0.2;
-                        return shadow;
+                        const color = new Color(tw[key.tone]["950"]);
+                        color.alpha = 0.2;
+                        return color;
                     })(),
                     success: tw.green[400],
                     test: tw.pink["400"],
@@ -130,20 +135,25 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     dim: tw[key.tone]["500"],
                     error: tw.red["400"],
                     focus: (() => {
-                        const focus = tw[key.accent]["300"];
-                        focus.alpha = 0.3;
-                        return focus;
+                        const color = new Color(tw[key.accent]["300"]);
+                        color.alpha = 0.3;
+                        return color;
                     })(),
                     foreground: tw[key.tone]["700"],
                     hover: (() => {
-                        const hover = tw[key.accent]["300"];
-                        hover.alpha = 0.2;
-                        return hover;
+                        const color = new Color(tw[key.accent]["300"]);
+                        color.alpha = 0.2;
+                        return color;
+                    })(),
+                    inactive: (() => {
+                        const color = new Color(tw[key.accent]["300"]);
+                        color.alpha = 0.15;
+                        return color;
                     })(),
                     shadow: (() => {
-                        const shadow = tw[key.tone]["50"];
-                        shadow.alpha = 0.5;
-                        return shadow;
+                        const color = new Color(tw[key.tone]["50"]);
+                        color.alpha = 0.5;
+                        return color;
                     })(),
                     success: tw.green[400],
                     test: tw.pink["400"],
