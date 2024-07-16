@@ -49,7 +49,7 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
     const createdTheme = makeTheme(mode, tone, accent);
     const { key, tw, terminal, theme } = {
         key: createdTheme.key,
-        tw: createdTheme.tw,
+        tw: createdTheme.twHex,
         terminal: hex(createdTheme.terminal),
         theme: hex(createdTheme.theme),
     };
