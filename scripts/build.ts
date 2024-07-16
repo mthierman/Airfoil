@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { generateTerminal } from "../modules/generators.mjs";
+import { generateTerminal, generateTheme } from "../modules/generators.mjs";
+import type { Accent, Mode, Tone } from "../modules/types.mjs";
 import manifest from "../package.json" with { type: "json" };
 
 const outdir = {
@@ -17,10 +18,11 @@ const themes = manifest.contributes.themes;
 let themePromises: Promise<void>[] = [];
 
 for (const theme of themes) {
+    console.log(resolve(outdir.themes, "..", theme.path));
     themePromises.push(
         writeFile(
-            resolve(import.meta.dirname, "..", "..", theme.path),
-            JSON.stringify(generateTheme(makeTheme(theme)), null, 4),
+            resolve(outdir.themes, "..", theme.path),
+            generateTheme(theme.mode as Mode, theme.tone as Tone, theme.accent as Accent),
         ),
     );
 }
