@@ -10,5 +10,5 @@
         "outDir": "build",
         "allowJs": true
     },
-    "include": ["modules", "scripts", "test"]
+    "include": ["modules", "scripts"]
 }
