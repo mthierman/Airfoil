@@ -9,7 +9,7 @@ export const hex = <T extends Record<string, Color>>(colors: T) => {
 
 export const glass = (color: Color, alpha: number) => {
     const clone = new Color(color);
-    clone.alpha = 1;
+    clone.alpha = alpha;
     return clone;
 };
 

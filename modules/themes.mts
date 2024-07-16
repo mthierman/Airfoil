@@ -122,7 +122,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     foreground: tw[key.tone]["700"],
                     hover: glass(tw[key.accent]["300"], 0.2),
                     inactive: glass(tw[key.accent]["300"], 0.15),
-                    shadow: glass(tw[key.tone]["50"], 0.2),
+                    shadow: glass(tw[key.tone]["50"], 0.5),
                     success: tw.green[400],
                     test: tw.pink["400"],
                     transparent: new Color("sRGB", [255, 255, 255], 0),
