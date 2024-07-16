@@ -1,7 +1,7 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { Accent, DefaultColors, Mode, Tone } from "./types.mjs";
+import type { Accent, DefaultColors, Mode, Scale, Tone } from "./types.mjs";
 
 export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent = "Blue") => {
     const dark = mode === "Dark";
@@ -49,7 +49,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
             return {
                 key: {
                     ...key,
-                    scale: "300",
+                    scale: "300" as Scale,
                 },
                 theme: {
                     accentColor: new Color(tw[key.accent]["400"]),
@@ -78,7 +78,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
             return {
                 key: {
                     ...key,
-                    scale: "700",
+                    scale: "700" as Scale,
                 },
                 theme: {
                     accentColor: new Color(tw[key.accent]["600"]),

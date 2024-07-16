@@ -1,5 +1,5 @@
 import { makeTerminal, makeTheme } from "../modules/themes.mjs";
-import type { Accent, Mode, Tone } from "../modules/types.mjs";
+import type { Accent, Mode, Scale, Tone } from "../modules/types.mjs";
 import { accents, modes, tones } from "../modules/types.mjs";
 import { hex } from "../modules/utilities.mjs";
 import manifest from "../package.json" with { type: "json" };
@@ -528,10 +528,8 @@ export const generateTheme = (mode: Mode, tone: Tone, accent: Accent) => {
         "toolbar.activeBackground": theme.focus,
         "toolbar.hoverBackground": theme.hover,
         "toolbar.hoverOutline": theme.transparent,
-        "tree.inactiveIndentGuidesStroke":
-            theme.tailwind[theme.keys.tone][theme.mode === "Dark" ? 700 : 300],
-        "tree.indentGuidesStroke":
-            theme.tailwind[theme.keys.tone][theme.mode === "Dark" ? 600 : 400],
+        "tree.inactiveIndentGuidesStroke": tw[key.tone][mode === "Dark" ? 700 : 300],
+        "tree.indentGuidesStroke": tw[key.tone][mode === "Dark" ? 600 : 400],
         "walkThrough.embeddedEditorBackground": theme.background,
         "walkthrough.stepTitle.foreground": theme.foreground,
         "welcomePage.background": theme.background,
