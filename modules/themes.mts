@@ -31,27 +31,30 @@ export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent 
         accent: accent.toLowerCase() as keyof typeof tw,
     };
 
+    const brightColorScale = "500";
+    const colorScale = "400";
+
     return {
         background: dark ? tw[key.tone]["950"] : tw[key.tone]["50"],
-        black: tw[key.tone][950],
-        blue: tw.blue[400],
-        brightBlack: tw[key.tone][800],
-        brightBlue: tw.blue[400],
-        brightCyan: tw.cyan[400],
-        brightGreen: tw.green[400],
-        brightPurple: tw.purple[400],
-        brightRed: tw.red[400],
-        brightWhite: tw[key.tone][50],
-        brightYellow: tw.yellow[400],
+        black: tw[key.tone]["950"],
+        blue: tw.blue[colorScale],
+        brightBlack: tw[key.tone]["800"],
+        brightBlue: tw.blue[brightColorScale],
+        brightCyan: tw.cyan[brightColorScale],
+        brightGreen: tw.green[brightColorScale],
+        brightPurple: tw.purple[brightColorScale],
+        brightRed: tw.red[brightColorScale],
+        brightWhite: tw[key.tone]["50"],
+        brightYellow: tw.yellow[brightColorScale],
         cursorColor: dark ? tw[key.tone]["50"] : tw[key.tone]["950"],
-        cyan: tw.cyan[400],
+        cyan: tw.cyan[colorScale],
         foreground: dark ? tw[key.tone]["50"] : tw[key.tone]["950"],
-        green: tw.green[400],
-        purple: tw.purple[400],
-        red: tw.red[400],
+        green: tw.green[colorScale],
+        purple: tw.purple[colorScale],
+        red: tw.red[colorScale],
         selectionBackground: tw[key.accent]["400"],
-        white: tw[key.tone][200],
-        yellow: tw.yellow[400],
+        white: tw[key.tone]["200"],
+        yellow: tw.yellow[colorScale],
     };
 };
 
