@@ -1,8 +1,8 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
-import type { Accent, DefaultColors, Mode, Scale, Tone } from "./types.mjs";
-import { glass, makeTailwindColors } from "./utilities.mjs";
+import type { Accent, Mode, Scale, Tone } from "./types.mjs";
+import { makeTailwindColors, transparent } from "./utilities.mjs";
 
 const makeTailwind = () => {
     const tw = resolveConfig(tailwindConfig).theme.colors;
@@ -87,11 +87,11 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     comment: tw.red["400"],
                     dim: tw[key.tone]["500"],
                     error: tw.red["400"],
-                    focus: glass(tw[key.accent]["800"], 0.5),
+                    focus: transparent(tw[key.accent]["800"], 0.5),
                     foreground: tw[key.tone]["300"],
-                    hover: glass(tw[key.accent]["800"], 0.4),
-                    inactive: glass(tw[key.accent]["800"], 0.3),
-                    shadow: glass(tw[key.tone]["950"], 0.2),
+                    hover: transparent(tw[key.accent]["800"], 0.4),
+                    inactive: transparent(tw[key.accent]["800"], 0.3),
+                    shadow: transparent(tw[key.tone]["950"], 0.2),
                     success: tw.green[400],
                     test: tw.pink["400"],
                     transparent: new Color("sRGB", [0, 0, 0], 0),
@@ -118,11 +118,11 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     comment: tw.red["700"],
                     dim: tw[key.tone]["500"],
                     error: tw.red["400"],
-                    focus: glass(tw[key.accent]["300"], 0.5),
+                    focus: transparent(tw[key.accent]["300"], 0.5),
                     foreground: tw[key.tone]["700"],
-                    hover: glass(tw[key.accent]["300"], 0.4),
-                    inactive: glass(tw[key.accent]["300"], 0.3),
-                    shadow: glass(tw[key.tone]["50"], 0.5),
+                    hover: transparent(tw[key.accent]["300"], 0.4),
+                    inactive: transparent(tw[key.accent]["300"], 0.3),
+                    shadow: transparent(tw[key.tone]["50"], 0.5),
                     success: tw.green[400],
                     test: tw.pink["400"],
                     transparent: new Color("sRGB", [255, 255, 255], 0),

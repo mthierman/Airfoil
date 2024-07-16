@@ -7,7 +7,7 @@ export const hex = <T extends Record<string, Color>>(colors: T) => {
     ) as Record<keyof T, string>;
 };
 
-export const glass = (color: Color, alpha: number) => {
+export const transparent = (color: Color, alpha: number) => {
     const clone = color.clone();
     clone.alpha = alpha;
     return clone;
