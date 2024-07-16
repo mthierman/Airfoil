@@ -59,7 +59,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
                     comment: new Color(tw.red["400"]),
                     dim: new Color(tw[key.tone]["500"]),
                     error: new Color(tw.red["400"]),
-                    focus: new Color(tw[key.accent]["800"]),
+                    focus: new Color(tw[key.accent]["800"].concat("4D")),
                     foreground: new Color(tw[key.tone]["300"]),
                     hover: new Color(tw[key.accent]["800"].concat("33")),
                     shadow: new Color(tw[key.tone]["950"].concat("33")),

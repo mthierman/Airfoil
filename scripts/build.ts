@@ -9,8 +9,6 @@ const outdir = {
     terminal: resolve(import.meta.dirname, "..", "..", "terminal"),
 };
 
-// ======
-
 await mkdir(outdir.themes, { recursive: true });
 
 const themes = manifest.contributes.themes;
@@ -18,7 +16,6 @@ const themes = manifest.contributes.themes;
 let themePromises: Promise<void>[] = [];
 
 for (const theme of themes) {
-    console.log(resolve(outdir.themes, "..", theme.path));
     themePromises.push(
         writeFile(
             resolve(outdir.themes, "..", theme.path),
@@ -28,8 +25,6 @@ for (const theme of themes) {
 }
 
 await Promise.all(themePromises);
-
-// ======
 
 await mkdir(outdir.terminal, { recursive: true });
 
