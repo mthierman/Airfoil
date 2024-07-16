@@ -38,7 +38,7 @@ export const generateManifest = () => {
 };
 
 export const generateTerminal = (mode: Mode) => {
-    const terminal = hex(makeTerminal("Dark"));
+    const terminal = hex(makeTerminal(mode));
 
     const generatedTerminal = {
         name: `Airfoil ${mode}`,
