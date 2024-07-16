@@ -3,12 +3,30 @@ import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "../tailwind.config.js";
 import type { Accent, DefaultColors, Mode, Scale, Tone } from "./types.mjs";
 
+export const makeTailwind = () => {
+    const tw = resolveConfig(tailwindConfig).theme.colors;
+    const {
+        inherit,
+        current,
+        transparent,
+        black,
+        white,
+        lightBlue,
+        warmGray,
+        trueGray,
+        coolGray,
+        blueGray,
+        ...colors
+    } = tw;
+    return colors;
+};
+
 export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent = "Blue") => {
     const dark = mode === "Dark";
-    const tw = resolveConfig(tailwindConfig).theme.colors;
+    const tw = makeTailwind();
     const key = {
-        tone: tone.toLowerCase() as keyof DefaultColors,
-        accent: accent.toLowerCase() as keyof DefaultColors,
+        tone: tone.toLowerCase() as keyof typeof tw,
+        accent: accent.toLowerCase() as keyof typeof tw,
     };
 
     return {
@@ -36,10 +54,10 @@ export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent 
 };
 
 export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
-    const tw = resolveConfig(tailwindConfig).theme.colors;
+    const tw = makeTailwind();
     const key = {
-        tone: tone.toLowerCase() as keyof DefaultColors,
-        accent: accent.toLowerCase() as keyof DefaultColors,
+        tone: tone.toLowerCase() as keyof typeof tw,
+        accent: accent.toLowerCase() as keyof typeof tw,
     };
 
     const terminal = makeTerminal(mode, tone, accent);
