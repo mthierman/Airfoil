@@ -49,6 +49,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
             return {
                 key: {
                     ...key,
+                    scale: 300,
                 },
                 theme: {
                     accentColor: new Color(tw[key.accent]["400"]),
@@ -77,6 +78,7 @@ export const makeTheme = (mode: Mode, tone: Tone, accent: Accent) => {
             return {
                 key: {
                     ...key,
+                    scale: 700,
                 },
                 theme: {
                     accentColor: new Color(tw[key.accent]["600"]),
