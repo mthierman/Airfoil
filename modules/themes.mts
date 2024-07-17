@@ -34,8 +34,8 @@ export const makeTerminal = (mode: Mode, tone: Tone = "Neutral", accent: Accent 
     const scale: { [key: string]: Scale } = {
         bg: dark ? "950" : "50",
         fg: dark ? "50" : "950",
-        color: "400",
-        brightColor: "500",
+        color: dark ? "400" : "600",
+        brightColor: dark ? "500" : "700",
     };
 
     return {
