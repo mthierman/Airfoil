@@ -1407,7 +1407,7 @@
     },
     "devDependencies": {
         "@types/node": "^20.14.11",
-        "@vscode/vsce": "^2.30.0",
+        "@vscode/vsce": "^2.31.1",
         "colorjs.io": "^0.5.2",
         "prettier": "^3.3.3",
         "tailwindcss": "^3.4.6",
