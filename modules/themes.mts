@@ -1,6 +1,6 @@
 import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
-import tailwindConfig from "../tailwind.config.js";
+import tailwindConfig from "./tailwind.config.mjs";
 import type { Accent, Mode, Scale, Tone } from "./types.mjs";
 import { makeTailwindColors, transparent } from "./utilities.mjs";
 
