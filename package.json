@@ -1398,11 +1398,10 @@
         "url": "https://github.com/mthierman/Airfoil.git"
     },
     "scripts": {
-        "check": "tsc --noEmit",
-        "manifest": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/manifest.js",
-        "build": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/build.js",
-        "watch": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/watch.js",
-        "clean": "tsc -b && node --no-warnings=ExperimentalWarning build/scripts/clean.js",
+        "manifest": "tsc -b && node build/scripts/manifest.js",
+        "build": "tsc -b && node build/scripts/build.js",
+        "watch": "tsc -b && node build/scripts/watch.js",
+        "clean": "tsc -b && node build/scripts/clean.js",
         "vsce": "vsce publish"
     },
     "devDependencies": {
