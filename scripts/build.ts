@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { generateTerminal, generateTheme } from "../modules/generators.mjs";
-import type { Accent, Mode, Tone } from "../modules/types.mjs";
+import type { Accent, Mode, Tone } from "../modules/themes.mjs";
 import manifest from "../package.json" with { type: "json" };
 
 const outdir = {

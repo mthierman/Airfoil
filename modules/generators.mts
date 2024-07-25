@@ -1,6 +1,5 @@
-import { colorsToHex, makeTerminal, makeTheme } from "../modules/themes.mjs";
-import type { Accent, Mode, Tone, WorkbenchColors } from "../modules/types.mjs";
-import { accents, modes, tones } from "../modules/types.mjs";
+import type { Accent, Mode, Tone, WorkbenchColors } from "../modules/themes.mjs";
+import { accents, colorsToHex, makeTerminal, makeTheme, modes, tones } from "../modules/themes.mjs";
 import manifest from "../package.json" with { type: "json" };
 
 export const generateManifest = () => {
