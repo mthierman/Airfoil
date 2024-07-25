@@ -2,7 +2,34 @@ import Color from "colorjs.io";
 import resolveConfig from "tailwindcss/resolveConfig.js";
 import tailwindConfig from "./tailwind.config.mjs";
 import type { Accent, Mode, Scale, Tone } from "./types.mjs";
-import { makeTailwindColors, transparent } from "./utilities.mjs";
+
+export const toHex = (color: Color) => {
+    return color.toString({ format: "hex" });
+};
+
+export const colorsToHex = <T extends Record<string, Color>>(colors: T) => {
+    return Object.fromEntries(
+        Object.entries(colors).map(([key, value]) => [key, toHex(value)]),
+    ) as Record<keyof T, string>;
+};
+
+export const transparent = (color: Color, alpha: number) => {
+    const clone = color.clone();
+    clone.alpha = alpha;
+    return clone;
+};
+
+const tailwindStringsToColors = <T extends Record<Scale, string>>(colors: T) => {
+    return Object.fromEntries(
+        Object.entries(colors).map(([key, value]) => [key, new Color(value)]),
+    ) as Record<keyof T, Color>;
+};
+
+export const makeTailwindColors = <T extends Record<string, Record<Scale, string>>>(colors: T) => {
+    return Object.fromEntries(
+        Object.entries(colors).map(([key, value]) => [key, tailwindStringsToColors(value)]),
+    ) as Record<keyof T, Record<Scale, Color>>;
+};
 
 const makeTailwind = () => {
     const tw = resolveConfig(tailwindConfig).theme.colors;
